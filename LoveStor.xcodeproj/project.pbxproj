@@ -3,19 +3,66 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		283297282535053200F59EF0 /* StoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283297272535053200F59EF0 /* StoriesViewController.swift */; };
+		283297392535955300F59EF0 /* LoveChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283297382535955300F59EF0 /* LoveChatViewController.swift */; };
+		28329751253598DF00F59EF0 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28329750253598DF00F59EF0 /* ChatViewController.swift */; };
+		283297572535992B00F59EF0 /* MockMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283297542535992B00F59EF0 /* MockMessage.swift */; };
+		283297582535992B00F59EF0 /* MockUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283297552535992B00F59EF0 /* MockUser.swift */; };
+		283297592535992B00F59EF0 /* MockSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283297562535992B00F59EF0 /* MockSocket.swift */; };
+		2832975E253599E600F59EF0 /* Lorem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2832975C253599E600F59EF0 /* Lorem.swift */; };
+		2832975F253599E600F59EF0 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2832975D253599E600F59EF0 /* SampleData.swift */; };
+		2832976525366D4500F59EF0 /* StickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2832976325366D4500F59EF0 /* StickerCollectionViewCell.swift */; };
+		2832976625366D4500F59EF0 /* StickerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2832976425366D4500F59EF0 /* StickerCollectionViewCell.xib */; };
+		2832976B2536F97E00F59EF0 /* SmallBubleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283297692536F97E00F59EF0 /* SmallBubleTableViewCell.swift */; };
+		2832976C2536F97E00F59EF0 /* SmallBubleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2832976A2536F97E00F59EF0 /* SmallBubleTableViewCell.xib */; };
+		2832979625370A2E00F59EF0 /* BigBubleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2832979425370A2E00F59EF0 /* BigBubleTableViewCell.swift */; };
+		2832979725370A2E00F59EF0 /* BigBubleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2832979525370A2E00F59EF0 /* BigBubleTableViewCell.xib */; };
+		2832979C2537111F00F59EF0 /* StickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2832979A2537111F00F59EF0 /* StickerTableViewCell.swift */; };
+		2832979D2537111F00F59EF0 /* StickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2832979B2537111F00F59EF0 /* StickerTableViewCell.xib */; };
+		283297A12537144500F59EF0 /* SelfSmallTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2832979F2537144500F59EF0 /* SelfSmallTableViewCell.swift */; };
+		283297A22537144500F59EF0 /* SelfSmallTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 283297A02537144500F59EF0 /* SelfSmallTableViewCell.xib */; };
+		283297AD25371DCA00F59EF0 /* SelfStickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283297AB25371DCA00F59EF0 /* SelfStickerTableViewCell.swift */; };
+		283297AE25371DCA00F59EF0 /* SelfStickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 283297AC25371DCA00F59EF0 /* SelfStickerTableViewCell.xib */; };
+		286AAC712548D2EC00E7FD21 /* LoveStorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286AAC702548D2EC00E7FD21 /* LoveStorView.swift */; };
 		28740B4A2530B4E40090DCC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28740B492530B4E40090DCC1 /* AppDelegate.swift */; };
 		28740B4C2530B4E40090DCC1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28740B4B2530B4E40090DCC1 /* SceneDelegate.swift */; };
 		28740B4E2530B4E40090DCC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28740B4D2530B4E40090DCC1 /* ViewController.swift */; };
 		28740B512530B4E40090DCC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28740B4F2530B4E40090DCC1 /* Main.storyboard */; };
 		28740B532530B4E90090DCC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28740B522530B4E90090DCC1 /* Assets.xcassets */; };
 		28740B562530B4E90090DCC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28740B542530B4E90090DCC1 /* LaunchScreen.storyboard */; };
+		28740B662530C26F0090DCC1 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28740B652530C26F0090DCC1 /* GradientView.swift */; };
+		28740B692531222A0090DCC1 /* KolodaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28740B682531222A0090DCC1 /* KolodaViewController.swift */; };
+		28BC8FC0253DE41C0055E21D /* Messenger-Pigeons in Resources */ = {isa = PBXBuildFile; fileRef = 28BC8FBD253DDCB90055E21D /* Messenger-Pigeons */; };
+		4DC476C0D0A904A18FF40187 /* Pods_LoveStor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 154CC5530A1B15B526DE1C92 /* Pods_LoveStor.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		154CC5530A1B15B526DE1C92 /* Pods_LoveStor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveStor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		283297272535053200F59EF0 /* StoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewController.swift; sourceTree = "<group>"; };
+		283297382535955300F59EF0 /* LoveChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveChatViewController.swift; sourceTree = "<group>"; };
+		28329750253598DF00F59EF0 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		283297542535992B00F59EF0 /* MockMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockMessage.swift; sourceTree = "<group>"; };
+		283297552535992B00F59EF0 /* MockUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockUser.swift; sourceTree = "<group>"; };
+		283297562535992B00F59EF0 /* MockSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSocket.swift; sourceTree = "<group>"; };
+		2832975C253599E600F59EF0 /* Lorem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lorem.swift; sourceTree = "<group>"; };
+		2832975D253599E600F59EF0 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		2832976325366D4500F59EF0 /* StickerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerCollectionViewCell.swift; sourceTree = "<group>"; };
+		2832976425366D4500F59EF0 /* StickerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StickerCollectionViewCell.xib; sourceTree = "<group>"; };
+		283297692536F97E00F59EF0 /* SmallBubleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallBubleTableViewCell.swift; sourceTree = "<group>"; };
+		2832976A2536F97E00F59EF0 /* SmallBubleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmallBubleTableViewCell.xib; sourceTree = "<group>"; };
+		2832979425370A2E00F59EF0 /* BigBubleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBubleTableViewCell.swift; sourceTree = "<group>"; };
+		2832979525370A2E00F59EF0 /* BigBubleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BigBubleTableViewCell.xib; sourceTree = "<group>"; };
+		2832979A2537111F00F59EF0 /* StickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerTableViewCell.swift; sourceTree = "<group>"; };
+		2832979B2537111F00F59EF0 /* StickerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StickerTableViewCell.xib; sourceTree = "<group>"; };
+		2832979F2537144500F59EF0 /* SelfSmallTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSmallTableViewCell.swift; sourceTree = "<group>"; };
+		283297A02537144500F59EF0 /* SelfSmallTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelfSmallTableViewCell.xib; sourceTree = "<group>"; };
+		283297AB25371DCA00F59EF0 /* SelfStickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfStickerTableViewCell.swift; sourceTree = "<group>"; };
+		283297AC25371DCA00F59EF0 /* SelfStickerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelfStickerTableViewCell.xib; sourceTree = "<group>"; };
+		286AAC702548D2EC00E7FD21 /* LoveStorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveStorView.swift; sourceTree = "<group>"; };
 		28740B462530B4E40090DCC1 /* LoveStor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveStor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28740B492530B4E40090DCC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28740B4B2530B4E40090DCC1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +71,11 @@
 		28740B522530B4E90090DCC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28740B552530B4E90090DCC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28740B572530B4E90090DCC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28740B652530C26F0090DCC1 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		28740B682531222A0090DCC1 /* KolodaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KolodaViewController.swift; sourceTree = "<group>"; };
+		28BC8FBD253DDCB90055E21D /* Messenger-Pigeons */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Messenger-Pigeons"; sourceTree = "<group>"; };
+		2FCB1C1A223763FF29BD58A5 /* Pods-LoveStor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveStor.debug.xcconfig"; path = "Target Support Files/Pods-LoveStor/Pods-LoveStor.debug.xcconfig"; sourceTree = "<group>"; };
+		E69256967628B0A67AD35F9E /* Pods-LoveStor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveStor.release.xcconfig"; path = "Target Support Files/Pods-LoveStor/Pods-LoveStor.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +83,100 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC476C0D0A904A18FF40187 /* Pods_LoveStor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28329799253710FF00F59EF0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2832976325366D4500F59EF0 /* StickerCollectionViewCell.swift */,
+				2832976425366D4500F59EF0 /* StickerCollectionViewCell.xib */,
+				283297692536F97E00F59EF0 /* SmallBubleTableViewCell.swift */,
+				2832976A2536F97E00F59EF0 /* SmallBubleTableViewCell.xib */,
+				2832979425370A2E00F59EF0 /* BigBubleTableViewCell.swift */,
+				2832979525370A2E00F59EF0 /* BigBubleTableViewCell.xib */,
+				2832979A2537111F00F59EF0 /* StickerTableViewCell.swift */,
+				2832979B2537111F00F59EF0 /* StickerTableViewCell.xib */,
+				2832979F2537144500F59EF0 /* SelfSmallTableViewCell.swift */,
+				283297A02537144500F59EF0 /* SelfSmallTableViewCell.xib */,
+				283297AB25371DCA00F59EF0 /* SelfStickerTableViewCell.swift */,
+				283297AC25371DCA00F59EF0 /* SelfStickerTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		286AAC642548D04F00E7FD21 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				28740B4D2530B4E40090DCC1 /* ViewController.swift */,
+				28329750253598DF00F59EF0 /* ChatViewController.swift */,
+				28740B682531222A0090DCC1 /* KolodaViewController.swift */,
+				283297272535053200F59EF0 /* StoriesViewController.swift */,
+				283297382535955300F59EF0 /* LoveChatViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		286AAC652548D14600E7FD21 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				28740B522530B4E90090DCC1 /* Assets.xcassets */,
+				28BC8FBD253DDCB90055E21D /* Messenger-Pigeons */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		286AAC682548D18100E7FD21 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				28740B492530B4E40090DCC1 /* AppDelegate.swift */,
+				28740B4B2530B4E40090DCC1 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		286AAC692548D20B00E7FD21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				28740B652530C26F0090DCC1 /* GradientView.swift */,
+				28329799253710FF00F59EF0 /* Cells */,
+				28740B4F2530B4E40090DCC1 /* Main.storyboard */,
+				28740B542530B4E90090DCC1 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		286AAC6A2548D22400E7FD21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				283297542535992B00F59EF0 /* MockMessage.swift */,
+				283297552535992B00F59EF0 /* MockUser.swift */,
+				283297562535992B00F59EF0 /* MockSocket.swift */,
+				2832975C253599E600F59EF0 /* Lorem.swift */,
+				2832975D253599E600F59EF0 /* SampleData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		286AAC6E2548D26600E7FD21 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				286AAC702548D2EC00E7FD21 /* LoveStorView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		28740B3D2530B4E40090DCC1 = {
 			isa = PBXGroup;
 			children = (
 				28740B482530B4E40090DCC1 /* LoveStor */,
 				28740B472530B4E40090DCC1 /* Products */,
+				DA1BDD9FACFCFD4FA21294C3 /* Pods */,
+				A8CAEBA3E88A345E135356CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +191,32 @@
 		28740B482530B4E40090DCC1 /* LoveStor */ = {
 			isa = PBXGroup;
 			children = (
-				28740B492530B4E40090DCC1 /* AppDelegate.swift */,
-				28740B4B2530B4E40090DCC1 /* SceneDelegate.swift */,
-				28740B4D2530B4E40090DCC1 /* ViewController.swift */,
-				28740B4F2530B4E40090DCC1 /* Main.storyboard */,
-				28740B522530B4E90090DCC1 /* Assets.xcassets */,
-				28740B542530B4E90090DCC1 /* LaunchScreen.storyboard */,
+				286AAC682548D18100E7FD21 /* App */,
+				286AAC692548D20B00E7FD21 /* View */,
+				286AAC652548D14600E7FD21 /* Resources */,
+				286AAC6A2548D22400E7FD21 /* Model */,
+				286AAC642548D04F00E7FD21 /* Controller */,
+				286AAC6E2548D26600E7FD21 /* Extensions */,
 				28740B572530B4E90090DCC1 /* Info.plist */,
 			);
 			path = LoveStor;
+			sourceTree = "<group>";
+		};
+		A8CAEBA3E88A345E135356CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				154CC5530A1B15B526DE1C92 /* Pods_LoveStor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA1BDD9FACFCFD4FA21294C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2FCB1C1A223763FF29BD58A5 /* Pods-LoveStor.debug.xcconfig */,
+				E69256967628B0A67AD35F9E /* Pods-LoveStor.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +226,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28740B5A2530B4E90090DCC1 /* Build configuration list for PBXNativeTarget "LoveStor" */;
 			buildPhases = (
+				6FD2566F6349563F2D6356F8 /* [CP] Check Pods Manifest.lock */,
 				28740B422530B4E40090DCC1 /* Sources */,
 				28740B432530B4E40090DCC1 /* Frameworks */,
 				28740B442530B4E40090DCC1 /* Resources */,
+				665053BF371B9E4E686F7A91 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,21 +279,87 @@
 			buildActionMask = 2147483647;
 			files = (
 				28740B562530B4E90090DCC1 /* LaunchScreen.storyboard in Resources */,
+				283297A22537144500F59EF0 /* SelfSmallTableViewCell.xib in Resources */,
+				2832979725370A2E00F59EF0 /* BigBubleTableViewCell.xib in Resources */,
+				2832979D2537111F00F59EF0 /* StickerTableViewCell.xib in Resources */,
 				28740B532530B4E90090DCC1 /* Assets.xcassets in Resources */,
+				2832976625366D4500F59EF0 /* StickerCollectionViewCell.xib in Resources */,
+				2832976C2536F97E00F59EF0 /* SmallBubleTableViewCell.xib in Resources */,
+				283297AE25371DCA00F59EF0 /* SelfStickerTableViewCell.xib in Resources */,
+				28BC8FC0253DE41C0055E21D /* Messenger-Pigeons in Resources */,
 				28740B512530B4E40090DCC1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		665053BF371B9E4E686F7A91 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoveStor/Pods-LoveStor-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoveStor/Pods-LoveStor-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoveStor/Pods-LoveStor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FD2566F6349563F2D6356F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoveStor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		28740B422530B4E40090DCC1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				283297582535992B00F59EF0 /* MockUser.swift in Sources */,
+				2832976B2536F97E00F59EF0 /* SmallBubleTableViewCell.swift in Sources */,
+				2832975E253599E600F59EF0 /* Lorem.swift in Sources */,
+				2832976525366D4500F59EF0 /* StickerCollectionViewCell.swift in Sources */,
+				283297282535053200F59EF0 /* StoriesViewController.swift in Sources */,
+				2832979625370A2E00F59EF0 /* BigBubleTableViewCell.swift in Sources */,
+				283297592535992B00F59EF0 /* MockSocket.swift in Sources */,
+				283297392535955300F59EF0 /* LoveChatViewController.swift in Sources */,
+				28329751253598DF00F59EF0 /* ChatViewController.swift in Sources */,
 				28740B4E2530B4E40090DCC1 /* ViewController.swift in Sources */,
+				2832975F253599E600F59EF0 /* SampleData.swift in Sources */,
+				2832979C2537111F00F59EF0 /* StickerTableViewCell.swift in Sources */,
 				28740B4A2530B4E40090DCC1 /* AppDelegate.swift in Sources */,
+				28740B692531222A0090DCC1 /* KolodaViewController.swift in Sources */,
+				286AAC712548D2EC00E7FD21 /* LoveStorView.swift in Sources */,
+				283297572535992B00F59EF0 /* MockMessage.swift in Sources */,
+				28740B662530C26F0090DCC1 /* GradientView.swift in Sources */,
 				28740B4C2530B4E40090DCC1 /* SceneDelegate.swift in Sources */,
+				283297AD25371DCA00F59EF0 /* SelfStickerTableViewCell.swift in Sources */,
+				283297A12537144500F59EF0 /* SelfSmallTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +436,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +491,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -283,10 +503,12 @@
 		};
 		28740B5B2530B4E90090DCC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FCB1C1A223763FF29BD58A5 /* Pods-LoveStor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PX8TS3NF66;
 				INFOPLIST_FILE = LoveStor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -295,16 +517,18 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yaroslavvushnyak.LoveStor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		28740B5C2530B4E90090DCC1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E69256967628B0A67AD35F9E /* Pods-LoveStor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PX8TS3NF66;
 				INFOPLIST_FILE = LoveStor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -313,7 +537,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yaroslavvushnyak.LoveStor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

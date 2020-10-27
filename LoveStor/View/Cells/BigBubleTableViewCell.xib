@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bigBubbleCell" rowHeight="153" id="KGk-i7-Jjw" customClass="BigBubleTableViewCell" customModule="LoveStor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="153"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="153"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bigBubble" translatesAutoresizingMaskIntoConstraints="NO" id="CPN-Jn-GlR">
+                        <rect key="frame" x="55" y="0.0" width="256" height="92"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="92" id="Aio-cd-sJZ"/>
+                            <constraint firstAttribute="width" constant="256" id="cbb-vM-TpG"/>
+                        </constraints>
+                    </imageView>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="littleAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="ucx-Wm-Vp9">
+                        <rect key="frame" x="16" y="6" width="33" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="33" id="64H-o1-L7r"/>
+                            <constraint firstAttribute="width" constant="33" id="SWd-cj-ajR"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKk-AO-2un">
+                        <rect key="frame" x="64" y="7.5" width="238" height="77"/>
+                        <string key="text">My name is Aida. Lorem ipsum dolor sit 
+amet, consectetur adipiscing elit, sed do 
+eiusmod tempor incididunt </string>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CPN-Jn-GlR" firstAttribute="leading" secondItem="ucx-Wm-Vp9" secondAttribute="trailing" constant="6" id="9iT-IK-pIt"/>
+                    <constraint firstItem="QKk-AO-2un" firstAttribute="centerX" secondItem="CPN-Jn-GlR" secondAttribute="centerX" id="A2A-4x-zkE"/>
+                    <constraint firstItem="QKk-AO-2un" firstAttribute="height" secondItem="CPN-Jn-GlR" secondAttribute="height" multiplier="0.726415" constant="10.169811320754718" id="EzS-UG-CuV"/>
+                    <constraint firstItem="ucx-Wm-Vp9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="HZv-Si-piP"/>
+                    <constraint firstItem="QKk-AO-2un" firstAttribute="width" secondItem="CPN-Jn-GlR" secondAttribute="width" multiplier="0.83908" constant="23.195519999999988" id="OsR-Az-bHa"/>
+                    <constraint firstItem="QKk-AO-2un" firstAttribute="centerY" secondItem="CPN-Jn-GlR" secondAttribute="centerY" id="WQK-F1-diN"/>
+                    <constraint firstItem="ucx-Wm-Vp9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="kTV-PE-Oag"/>
+                    <constraint firstItem="CPN-Jn-GlR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="yZl-Ow-Ypz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <point key="canvasLocation" x="131.8840579710145" y="138.95089285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bigBubble" width="303" height="106"/>
+        <image name="littleAvatar" width="40" height="40"/>
+    </resources>
+</document>
