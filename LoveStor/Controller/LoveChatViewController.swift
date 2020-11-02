@@ -65,7 +65,7 @@ class LoveChatViewController: UIViewController {
   }
   @IBOutlet weak var stickerCollectionView: UICollectionView! {
     didSet {
-      stickerCollectionView.then {
+      stickerCollectionView.do {
         $0.delegate = self
         $0.dataSource = self
         $0.register(UINib(nibName: "StickerCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "sticker")
@@ -115,8 +115,6 @@ class LoveChatViewController: UIViewController {
   @objc func returnBack() {
     navigationController?.popViewController(animated: true)
   }
-
-
 }
 
 extension LoveChatViewController: UICollectionViewDelegate, UICollectionViewDataSource {

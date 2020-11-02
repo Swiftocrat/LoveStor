@@ -37,6 +37,8 @@
 		28740B662530C26F0090DCC1 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28740B652530C26F0090DCC1 /* GradientView.swift */; };
 		28740B692531222A0090DCC1 /* KolodaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28740B682531222A0090DCC1 /* KolodaViewController.swift */; };
 		28BC8FC0253DE41C0055E21D /* Messenger-Pigeons in Resources */ = {isa = PBXBuildFile; fileRef = 28BC8FBD253DDCB90055E21D /* Messenger-Pigeons */; };
+		4378FA24254EF0C7001600B8 /* KolodaCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4378FA23254EF0C7001600B8 /* KolodaCardView.swift */; };
+		4378FA28254EF0D2001600B8 /* KolodaCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4378FA27254EF0D2001600B8 /* KolodaCardView.xib */; };
 		4DC476C0D0A904A18FF40187 /* Pods_LoveStor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 154CC5530A1B15B526DE1C92 /* Pods_LoveStor.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,8 @@
 		28740B682531222A0090DCC1 /* KolodaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KolodaViewController.swift; sourceTree = "<group>"; };
 		28BC8FBD253DDCB90055E21D /* Messenger-Pigeons */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Messenger-Pigeons"; sourceTree = "<group>"; };
 		2FCB1C1A223763FF29BD58A5 /* Pods-LoveStor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveStor.debug.xcconfig"; path = "Target Support Files/Pods-LoveStor/Pods-LoveStor.debug.xcconfig"; sourceTree = "<group>"; };
+		4378FA23254EF0C7001600B8 /* KolodaCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KolodaCardView.swift; sourceTree = "<group>"; };
+		4378FA27254EF0D2001600B8 /* KolodaCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KolodaCardView.xib; sourceTree = "<group>"; };
 		E69256967628B0A67AD35F9E /* Pods-LoveStor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveStor.release.xcconfig"; path = "Target Support Files/Pods-LoveStor/Pods-LoveStor.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +97,7 @@
 		28329799253710FF00F59EF0 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				4378FA22254EF0B2001600B8 /* KolodaView */,
 				2832976325366D4500F59EF0 /* StickerCollectionViewCell.swift */,
 				2832976425366D4500F59EF0 /* StickerCollectionViewCell.xib */,
 				283297692536F97E00F59EF0 /* SmallBubleTableViewCell.swift */,
@@ -202,6 +207,15 @@
 			path = LoveStor;
 			sourceTree = "<group>";
 		};
+		4378FA22254EF0B2001600B8 /* KolodaView */ = {
+			isa = PBXGroup;
+			children = (
+				4378FA23254EF0C7001600B8 /* KolodaCardView.swift */,
+				4378FA27254EF0D2001600B8 /* KolodaCardView.xib */,
+			);
+			path = KolodaView;
+			sourceTree = "<group>";
+		};
 		A8CAEBA3E88A345E135356CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +294,7 @@
 			files = (
 				28740B562530B4E90090DCC1 /* LaunchScreen.storyboard in Resources */,
 				283297A22537144500F59EF0 /* SelfSmallTableViewCell.xib in Resources */,
+				4378FA28254EF0D2001600B8 /* KolodaCardView.xib in Resources */,
 				2832979725370A2E00F59EF0 /* BigBubleTableViewCell.xib in Resources */,
 				2832979D2537111F00F59EF0 /* StickerTableViewCell.xib in Resources */,
 				28740B532530B4E90090DCC1 /* Assets.xcassets in Resources */,
@@ -345,6 +360,7 @@
 				2832975E253599E600F59EF0 /* Lorem.swift in Sources */,
 				2832976525366D4500F59EF0 /* StickerCollectionViewCell.swift in Sources */,
 				283297282535053200F59EF0 /* StoriesViewController.swift in Sources */,
+				4378FA24254EF0C7001600B8 /* KolodaCardView.swift in Sources */,
 				2832979625370A2E00F59EF0 /* BigBubleTableViewCell.swift in Sources */,
 				283297592535992B00F59EF0 /* MockSocket.swift in Sources */,
 				283297392535955300F59EF0 /* LoveChatViewController.swift in Sources */,

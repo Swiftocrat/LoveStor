@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     // Do any additional setup after loading the view.
   }
 
-
+    @IBAction func letsGoButtonTapped(_ sender: Any) {
+        guard let kolodaVC = storyboard?.instantiateViewController(identifier: "KolodaViewController") as? KolodaViewController else { return }
+        show(kolodaVC, sender: self)
+    }
 }
 

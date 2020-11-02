@@ -60,7 +60,7 @@ class StoriesViewController: UIViewController {
     storyImageView.makeCircle()
     storyContainerView.makeCircle()
     mainButton.layer.cornerRadius = 33
-    matchLabel.animate(newText: "Its Match", characterDelay: 0.2)
+    matchLabel.animate(newText: "It's a Match", characterDelay: 0.2)
     UIView.animate(withDuration: 1.0) {
       self.descrLabel.alpha = 1
     }

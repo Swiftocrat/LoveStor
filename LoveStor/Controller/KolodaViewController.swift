@@ -28,6 +28,7 @@ class KolodaViewController: UIViewController {
   
   @IBOutlet weak var kolodaView: KolodaView! {
     didSet {
+        kolodaView.layer.cornerRadius = 30
       kolodaView.dataSource = self
       kolodaView.delegate = self
       kolodaView.layer.cornerRadius = 30
@@ -60,7 +61,6 @@ class KolodaViewController: UIViewController {
   }
 }
 
-
 extension KolodaViewController: KolodaViewDelegate, KolodaViewDataSource {
   
   func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
@@ -69,11 +69,11 @@ extension KolodaViewController: KolodaViewDelegate, KolodaViewDataSource {
   }
   
   func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
-    koloda.reloadData()
+    koloda.reloadInputViews()
   }
   
   func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-    return UIImageView(image: images[index])
+    return Bundle.main.loadNibNamed("KolodaCardView", owner: self, options: nil)![0] as! KolodaCardView//UIImageView(image: images[index])
   }
   
   func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
