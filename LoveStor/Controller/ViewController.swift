@@ -15,8 +15,7 @@ class ViewController: UIViewController {
   }
 
     @IBAction func letsGoButtonTapped(_ sender: Any) {
-        guard let kolodaVC = storyboard?.instantiateViewController(identifier: "KolodaViewController") as? KolodaViewController else { return }
-        show(kolodaVC, sender: self)
+//        guard let kolodaVC = storyboard?.instantiateViewController(identifier: "KolodaViewController") as? KolodaViewController else { return }
+//        show(kolodaVC, sender: self)
     }
 }
-

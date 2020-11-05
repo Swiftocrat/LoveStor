@@ -10,9 +10,8 @@ import UIKit
 class StoriesViewController: UIViewController {
 
   @IBOutlet weak var buttonCenter: NSLayoutConstraint!
-  @IBOutlet weak var buttonW: NSLayoutConstraint!
   @IBOutlet weak var heartW: NSLayoutConstraint!
-  @IBOutlet weak var heartBtn:UIImageView!
+  @IBOutlet weak var heartBtn: UIImageView!
   @IBOutlet weak var imsgeW: NSLayoutConstraint!
   @IBOutlet weak var imageH: NSLayoutConstraint!
   @IBOutlet var stoppedHeart:[UIImageView]!
@@ -41,7 +40,11 @@ class StoriesViewController: UIViewController {
     }
   }
   @IBOutlet weak var matchLabel: UILabel!
-  @IBOutlet weak var mainButton: GradientView!
+  @IBOutlet weak var mainButton: UIButton! {
+        didSet {
+            mainButton.addGestureRecognizer(UITapGestureRecognizer(target: self,action: #selector(chatNowButtonTapped)))
+    }
+    }
   @IBOutlet weak var storyImageView: UIImageView!
   @IBOutlet weak var storyContainerView: UIView! {
     didSet {
@@ -141,21 +144,13 @@ class StoriesViewController: UIViewController {
       }
     )
   }
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-  }
-  
+    
+    @objc func chatNowButtonTapped() {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoveChatViewController")
+        navigationController?.pushViewController(vc, animated: true)
+    }
   
   @objc func returnBack() {
     navigationController?.popViewController(animated: true)
   }
 }
-
-
-
-
-
-
-
-
