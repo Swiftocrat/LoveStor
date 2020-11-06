@@ -30,8 +30,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bigBubble" translatesAutoresizingMaskIntoConstraints="NO" id="TkR-kw-9uQ">
                                 <rect key="frame" x="0.0" y="0.0" width="303" height="130"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yfV-N0-HwS">
-                                <rect key="frame" x="19" y="13.5" width="268" height="103"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yfV-N0-HwS">
+                                <rect key="frame" x="19" y="11" width="268" height="108"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment content="My name is Aida. Lorem ipsum  dolor sit amet, consectetur  adipiscing elit, sed do eiusmod ">
@@ -47,7 +47,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" secondItem="yfV-N0-HwS" secondAttribute="height" multiplier="1.26" id="1rz-0r-Lqe"/>
+                            <constraint firstAttribute="height" secondItem="yfV-N0-HwS" secondAttribute="height" multiplier="1.2" id="1rz-0r-Lqe"/>
                             <constraint firstItem="TkR-kw-9uQ" firstAttribute="leading" secondItem="apY-Ow-3kz" secondAttribute="leading" id="AFf-Le-31C"/>
                             <constraint firstItem="yfV-N0-HwS" firstAttribute="centerY" secondItem="apY-Ow-3kz" secondAttribute="centerY" id="N7z-Ga-L15"/>
                             <constraint firstAttribute="trailing" secondItem="TkR-kw-9uQ" secondAttribute="trailing" id="VWc-Jm-R9z"/>

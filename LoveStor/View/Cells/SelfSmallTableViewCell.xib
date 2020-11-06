@@ -18,9 +18,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IML-jp-Bqc" userLabel="Short bubble view">
-                        <rect key="frame" x="507" y="5.5" width="161" height="45"/>
+                        <rect key="frame" x="507" y="5" width="161" height="45"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selfBubble" translatesAutoresizingMaskIntoConstraints="NO" id="y9u-ZG-6mN">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selfBubble" translatesAutoresizingMaskIntoConstraints="NO" id="y9u-ZG-6mN">
                                 <rect key="frame" x="0.0" y="0.0" width="161" height="45"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -57,12 +57,12 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdh-fS-mJh" userLabel="Bubble view">
-                        <rect key="frame" x="324" y="5.5" width="344" height="45"/>
+                        <rect key="frame" x="324" y="5" width="344" height="45"/>
                         <subviews>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selfLong" translatesAutoresizingMaskIntoConstraints="NO" id="jSJ-0X-weA">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selfLong" translatesAutoresizingMaskIntoConstraints="NO" id="jSJ-0X-weA">
                                 <rect key="frame" x="0.0" y="0.0" width="344" height="45"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is it working?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sl6-y8-cIr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't they know you're saving the?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sl6-y8-cIr">
                                 <rect key="frame" x="25" y="12" width="298" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -76,6 +76,7 @@
                             <constraint firstAttribute="bottom" secondItem="jSJ-0X-weA" secondAttribute="bottom" id="dd4-6n-a43"/>
                             <constraint firstItem="sl6-y8-cIr" firstAttribute="centerY" secondItem="jdh-fS-mJh" secondAttribute="centerY" id="iMA-qF-Tsm"/>
                             <constraint firstItem="jSJ-0X-weA" firstAttribute="top" secondItem="jdh-fS-mJh" secondAttribute="top" id="ilF-cR-VID"/>
+                            <constraint firstAttribute="width" secondItem="sl6-y8-cIr" secondAttribute="width" multiplier="1.15436" id="jlr-Tv-NqF"/>
                             <constraint firstItem="jSJ-0X-weA" firstAttribute="leading" secondItem="jdh-fS-mJh" secondAttribute="leading" id="uEI-FL-pb3"/>
                             <constraint firstAttribute="height" constant="45" id="yGx-vd-bLc"/>
                             <constraint firstAttribute="trailing" secondItem="sl6-y8-cIr" secondAttribute="trailing" constant="21" id="ylp-6p-e8T"/>
@@ -83,9 +84,11 @@
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="IML-jp-Bqc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="02l-VG-Bv7"/>
                     <constraint firstAttribute="trailing" secondItem="IML-jp-Bqc" secondAttribute="trailing" constant="16" id="LWo-lv-Ibv"/>
-                    <constraint firstItem="IML-jp-Bqc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="U1l-Mo-RWH"/>
-                    <constraint firstItem="jdh-fS-mJh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="axQ-gW-F6U"/>
+                    <constraint firstAttribute="bottom" secondItem="IML-jp-Bqc" secondAttribute="bottom" constant="5" id="Vjm-c8-Odo"/>
+                    <constraint firstAttribute="bottom" secondItem="jdh-fS-mJh" secondAttribute="bottom" constant="5" id="hdq-is-LFx"/>
+                    <constraint firstItem="jdh-fS-mJh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="l19-ey-CLV"/>
                     <constraint firstAttribute="trailing" secondItem="jdh-fS-mJh" secondAttribute="trailing" constant="16" id="paU-8d-Rm6"/>
                 </constraints>
             </tableViewCellContentView>

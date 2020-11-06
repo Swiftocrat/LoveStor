@@ -42,6 +42,7 @@
 		43939AC125546BFD006A50B1 /* BasicChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43939AC025546BFD006A50B1 /* BasicChatViewController.swift */; };
 		43B57C612551ECBF00411588 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B57C602551ECBF00411588 /* LoaderViewController.swift */; };
 		43B57C722551EE5C00411588 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B57C712551EE5C00411588 /* SelectionViewController.swift */; };
+		43BC1BC22555DB0C00D0F13D /* PaidAnswerChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BC1BC12555DB0C00D0F13D /* PaidAnswerChatViewController.swift */; };
 		43C35A2B2555C5C80062E115 /* SelfBigBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C35A292555C5C80062E115 /* SelfBigBubbleTableViewCell.swift */; };
 		43C35A2C2555C5C80062E115 /* SelfBigBubbleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43C35A2A2555C5C80062E115 /* SelfBigBubbleTableViewCell.xib */; };
 		43EBAF7C2551D6340096FC69 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EBAF7B2551D6340096FC69 /* ChatVC.swift */; };
@@ -88,6 +89,7 @@
 		43939AC025546BFD006A50B1 /* BasicChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicChatViewController.swift; sourceTree = "<group>"; };
 		43B57C602551ECBF00411588 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
 		43B57C712551EE5C00411588 /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
+		43BC1BC12555DB0C00D0F13D /* PaidAnswerChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaidAnswerChatViewController.swift; sourceTree = "<group>"; };
 		43C35A292555C5C80062E115 /* SelfBigBubbleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfBigBubbleTableViewCell.swift; sourceTree = "<group>"; };
 		43C35A2A2555C5C80062E115 /* SelfBigBubbleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelfBigBubbleTableViewCell.xib; sourceTree = "<group>"; };
 		43EBAF7B2551D6340096FC69 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				43939AC025546BFD006A50B1 /* BasicChatViewController.swift */,
+				43BC1BC12555DB0C00D0F13D /* PaidAnswerChatViewController.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				283297392535955300F59EF0 /* LoveChatViewController.swift in Sources */,
 				28329751253598DF00F59EF0 /* ChatViewController.swift in Sources */,
 				28740B4E2530B4E40090DCC1 /* ViewController.swift in Sources */,
+				43BC1BC22555DB0C00D0F13D /* PaidAnswerChatViewController.swift in Sources */,
 				2832975F253599E600F59EF0 /* SampleData.swift in Sources */,
 				43B57C722551EE5C00411588 /* SelectionViewController.swift in Sources */,
 				2832979C2537111F00F59EF0 /* StickerTableViewCell.swift in Sources */,

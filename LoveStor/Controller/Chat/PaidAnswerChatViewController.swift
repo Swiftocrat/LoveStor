@@ -1,25 +1,23 @@
 //
-//  LoveChatViewController.swift
+//  PaidAnswerChatViewController.swift
 //  LoveStor
 //
-//  Created by Yaroslav Vushnyak on 13.10.2020.
+//  Created by ***** ****** on 13.10.2020.
 //
 
 import UIKit
 import MessageKit
 import InputBarAccessoryView
 
-class BasicChatViewController: UIViewController {
-  
-    var responseIndex: IndexPath?
+class PaidAnswerChatViewController: UIViewController {
     
+    @IBOutlet weak var sendPaidMessageButton: UIImageView!
     @IBOutlet weak var sendImageButton: UIImageView! {
       didSet {
         sendImageButton.isUserInteractionEnabled = true
         sendImageButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(sendMessage)))
-      }
+        }
     }
-    
     @IBOutlet weak var chatHeader: UIImageView!
     @IBOutlet weak var chatTableView: UITableView! {
         didSet {
@@ -41,7 +39,8 @@ class BasicChatViewController: UIViewController {
     
       @IBOutlet weak var messageTextView: UITextView!
     
-    var messages: [ChatMessageType] = [.small, .big, .sticker, .selfSmall, .selfBig]
+    var responseIndex: IndexPath?
+    var messages: [ChatMessageType] = [.small, .big, .sticker, .selfSmall, .big, .small]
     
     override func viewDidLoad() {
           super.viewDidLoad()
@@ -50,20 +49,21 @@ class BasicChatViewController: UIViewController {
     }
     
     @objc func sendMessage() {
-        sendImageButton.pulsate()
-        self.messages.append(.selfBig)
-        self.chatTableView.beginUpdates()
-        self.chatTableView.insertRows(at: [IndexPath.init(row:  messages.count - 1, section: 0)], with: .automatic)
-        self.chatTableView.endUpdates()
-        chatTableView.scrollTableViewToBottom(animated: true)
+      sendImageButton.pulsate()
+      self.messages.append(.selfSmallCustom)
+      self.chatTableView.beginUpdates()
+      self.chatTableView.insertRows(at: [IndexPath.init(row: messages.count - 1, section: 0)], with: .automatic)
+      self.chatTableView.endUpdates()
+      chatTableView.scrollTableViewToBottom(animated: true)
+    
     }
     
     @objc func returnBack() {
-        navigationController?.popViewController(animated: true)
+      navigationController?.popViewController(animated: true)
     }
 }
 
-extension BasicChatViewController: UITableViewDelegate, UITableViewDataSource {
+extension PaidAnswerChatViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch messages[indexPath.row] {
         case .big, .selfBig: return 126
