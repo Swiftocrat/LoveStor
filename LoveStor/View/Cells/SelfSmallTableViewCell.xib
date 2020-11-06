@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IML-jp-Bqc" userLabel="Short bubble view">
-                        <rect key="frame" x="512.5" y="5.5" width="155.5" height="45"/>
+                        <rect key="frame" x="507" y="5.5" width="161" height="45"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selfBubble" translatesAutoresizingMaskIntoConstraints="NO" id="y9u-ZG-6mN">
-                                <rect key="frame" x="0.0" y="0.0" width="155.5" height="45"/>
+                                <rect key="frame" x="0.0" y="0.0" width="161" height="45"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -31,8 +31,8 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is it working?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejw-aE-SDs">
-                                <rect key="frame" x="25" y="12" width="109.5" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <rect key="frame" x="25" y="11.5" width="115" height="22.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -42,7 +42,7 @@
                             <constraint firstItem="y9u-ZG-6mN" firstAttribute="leading" secondItem="IML-jp-Bqc" secondAttribute="leading" id="4II-wP-YBP"/>
                             <constraint firstItem="y9u-ZG-6mN" firstAttribute="top" secondItem="IML-jp-Bqc" secondAttribute="top" id="6fk-nl-J7S"/>
                             <constraint firstAttribute="trailing" secondItem="y9u-ZG-6mN" secondAttribute="trailing" id="Dvj-jg-PuQ"/>
-                            <constraint firstAttribute="width" secondItem="Ejw-aE-SDs" secondAttribute="width" multiplier="1.42" id="RGY-TY-Aic"/>
+                            <constraint firstAttribute="width" secondItem="Ejw-aE-SDs" secondAttribute="width" multiplier="1.4" id="RGY-TY-Aic"/>
                             <constraint firstItem="Ejw-aE-SDs" firstAttribute="leading" secondItem="IML-jp-Bqc" secondAttribute="leading" constant="25" id="VDL-eu-sjj"/>
                             <constraint firstAttribute="trailing" secondItem="Ejw-aE-SDs" secondAttribute="trailing" constant="21" id="doZ-Cq-yiZ"/>
                             <constraint firstItem="Ejw-aE-SDs" firstAttribute="centerY" secondItem="IML-jp-Bqc" secondAttribute="centerY" id="tdJ-oI-HmB"/>

@@ -31,13 +31,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="303" height="130"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2AS-cN-TCK">
-                                <rect key="frame" x="19" y="15" width="268" height="100"/>
+                                <rect key="frame" x="19" y="13.5" width="268" height="103"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment content="My name is Aida. Lorem ipsum  dolor sit amet, consectetur  adipiscing elit, sed do eiusmod ">
                                         <attributes>
-                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                            <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="19" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="6" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -50,7 +50,7 @@
                             <constraint firstAttribute="bottom" secondItem="8lB-zI-A0f" secondAttribute="bottom" id="2wF-8N-ufY"/>
                             <constraint firstAttribute="trailing" secondItem="2AS-cN-TCK" secondAttribute="trailing" constant="16" id="AcH-A9-0gm"/>
                             <constraint firstItem="8lB-zI-A0f" firstAttribute="leading" secondItem="aw9-Y9-yLB" secondAttribute="leading" id="Eiw-cC-56Z"/>
-                            <constraint firstAttribute="height" secondItem="2AS-cN-TCK" secondAttribute="height" multiplier="1.3" id="Glh-2S-bvw"/>
+                            <constraint firstAttribute="height" secondItem="2AS-cN-TCK" secondAttribute="height" multiplier="1.26" id="Glh-2S-bvw"/>
                             <constraint firstAttribute="width" constant="303" id="HwN-Js-4qs"/>
                             <constraint firstAttribute="trailing" secondItem="8lB-zI-A0f" secondAttribute="trailing" id="JFd-sx-gYE"/>
                             <constraint firstItem="2AS-cN-TCK" firstAttribute="centerY" secondItem="aw9-Y9-yLB" secondAttribute="centerY" id="K9m-LM-KTc"/>

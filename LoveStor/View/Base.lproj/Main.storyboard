@@ -596,7 +596,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seventyTransparentRedHeart" translatesAutoresizingMaskIntoConstraints="NO" id="yDm-cf-qH4">
-                                <rect key="frame" x="9" y="-250" width="70" height="57"/>
+                                <rect key="frame" x="9" y="-250" width="69" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redheart" translatesAutoresizingMaskIntoConstraints="NO" id="b2v-Bj-RVk">
@@ -628,7 +628,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tranparentRedHeart" translatesAutoresizingMaskIntoConstraints="NO" id="RG0-AD-hZ8">
-                                <rect key="frame" x="44" y="-75" width="70" height="57"/>
+                                <rect key="frame" x="43" y="-75" width="70" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seventyTransparentRedHeart" translatesAutoresizingMaskIntoConstraints="NO" id="TKY-Lx-YVk">
@@ -640,11 +640,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tranparentRedHeart" translatesAutoresizingMaskIntoConstraints="NO" id="KGi-f2-G1f">
-                                <rect key="frame" x="142" y="-231" width="69" height="57"/>
+                                <rect key="frame" x="141" y="-231" width="70" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redheart" translatesAutoresizingMaskIntoConstraints="NO" id="maZ-iG-6yc">
-                                <rect key="frame" x="142" y="-130" width="90" height="77"/>
+                                <rect key="frame" x="141" y="-130" width="90" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="redheart" translatesAutoresizingMaskIntoConstraints="NO" id="fb3-NS-b8k">
@@ -688,7 +688,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grayHeart" translatesAutoresizingMaskIntoConstraints="NO" id="S1y-xf-o5u">
-                                <rect key="frame" x="292" y="-150" width="69" height="57"/>
+                                <rect key="frame" x="291" y="-150" width="69" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="match" translatesAutoresizingMaskIntoConstraints="NO" id="wem-Fg-KK6">
@@ -866,13 +866,17 @@ eiusmod tempor incididunt ut labore</string>
                                 </connections>
                             </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChatHeader" translatesAutoresizingMaskIntoConstraints="NO" id="WEf-kW-hVL">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="231"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarChat" translatesAutoresizingMaskIntoConstraints="NO" id="ynm-7f-P9m">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconProgressCircle" translatesAutoresizingMaskIntoConstraints="NO" id="ynm-7f-P9m">
                                 <rect key="frame" x="121" y="44" width="172" height="161.66666666666666"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="VKU-0z-dDo">
-                                <rect key="frame" x="363" y="30" width="31" height="21.666666666666671"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badgedImage" translatesAutoresizingMaskIntoConstraints="NO" id="VKU-0z-dDo">
+                                <rect key="frame" x="363" y="30" width="31" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="31" id="2o4-4V-vUa"/>
+                                    <constraint firstAttribute="height" constant="32" id="rB3-9i-NNY"/>
+                                </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NDy-CU-EJF">
                                 <rect key="frame" x="0.0" y="670" width="414" height="172"/>
@@ -949,7 +953,7 @@ consectetur adipiscing elit</string>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJ5-7Z-Jtu">
-                                <rect key="frame" x="331" y="120" width="83" height="31"/>
+                                <rect key="frame" x="331" y="155.66666666666666" width="83" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="TJA-eZ-hix"/>
                                     <constraint firstAttribute="width" constant="83" id="hKx-b9-EGS"/>
@@ -960,10 +964,24 @@ consectetur adipiscing elit</string>
                                 </state>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onlineIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="imv-gD-kFM">
-                                <rect key="frame" x="293" y="117.66666666666667" width="14" height="14.000000000000014"/>
+                                <rect key="frame" x="298" y="117.66666666666667" width="14" height="14.000000000000014"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="14" id="Mbg-d2-Cuj"/>
                                     <constraint firstAttribute="height" constant="14" id="RGf-K6-8y0"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconBotAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="6Tq-uR-9q5">
+                                <rect key="frame" x="140.66666666666666" y="58.333333333333343" width="132.99999999999997" height="133"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="WoV-t4-6DI"/>
+                                    <constraint firstAttribute="height" constant="133" id="uXn-q4-Iy6"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconHeartProgress" translatesAutoresizingMaskIntoConstraints="NO" id="0tO-rV-c3w">
+                                <rect key="frame" x="181" y="176.33333333333334" width="52" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="6Vm-tp-Lef"/>
+                                    <constraint firstAttribute="width" constant="52" id="dPA-gh-NMe"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -971,32 +989,34 @@ consectetur adipiscing elit</string>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="NDy-CU-EJF" firstAttribute="centerX" secondItem="rZU-KP-uiu" secondAttribute="centerX" id="0Cb-sW-pDh"/>
-                            <constraint firstItem="imv-gD-kFM" firstAttribute="leading" secondItem="ynm-7f-P9m" secondAttribute="trailing" id="2Ej-w1-VTt"/>
+                            <constraint firstItem="imv-gD-kFM" firstAttribute="leading" secondItem="ynm-7f-P9m" secondAttribute="trailing" constant="5" id="2Ej-w1-VTt"/>
+                            <constraint firstItem="0tO-rV-c3w" firstAttribute="bottom" secondItem="ynm-7f-P9m" secondAttribute="bottom" multiplier="1.095" constant="-2.8716666666666129" id="3yz-dQ-vlj"/>
                             <constraint firstItem="WEf-kW-hVL" firstAttribute="top" secondItem="rZU-KP-uiu" secondAttribute="top" id="5fr-IR-BWw"/>
                             <constraint firstAttribute="trailing" secondItem="trj-Jg-AtJ" secondAttribute="trailing" id="6HS-54-0ce"/>
                             <constraint firstItem="WEf-kW-hVL" firstAttribute="leading" secondItem="rZU-KP-uiu" secondAttribute="leading" id="6eV-fx-ysq"/>
                             <constraint firstAttribute="trailing" secondItem="NDy-CU-EJF" secondAttribute="trailing" id="IiH-gK-tk2"/>
-                            <constraint firstItem="VKU-0z-dDo" firstAttribute="width" secondItem="rZU-KP-uiu" secondAttribute="width" multiplier="0.0748792" id="KL5-mg-gPD"/>
                             <constraint firstAttribute="trailing" secondItem="VKU-0z-dDo" secondAttribute="trailing" constant="20" id="M66-dx-tJd"/>
                             <constraint firstItem="trj-Jg-AtJ" firstAttribute="top" secondItem="rZU-KP-uiu" secondAttribute="top" id="MFX-aZ-lws"/>
+                            <constraint firstItem="6Tq-uR-9q5" firstAttribute="centerY" secondItem="ynm-7f-P9m" secondAttribute="centerY" id="OLq-qF-ds3"/>
+                            <constraint firstItem="SJ5-7Z-Jtu" firstAttribute="top" secondItem="imv-gD-kFM" secondAttribute="bottom" constant="24" id="RLp-3c-RHT"/>
                             <constraint firstItem="ynm-7f-P9m" firstAttribute="top" secondItem="rZU-KP-uiu" secondAttribute="top" constant="44" id="SbI-xt-O6D"/>
                             <constraint firstItem="ynm-7f-P9m" firstAttribute="height" secondItem="rZU-KP-uiu" secondAttribute="height" multiplier="0.191964" id="U5G-EW-t7K"/>
-                            <constraint firstItem="WEf-kW-hVL" firstAttribute="height" secondItem="rZU-KP-uiu" secondAttribute="height" multiplier="0.261161" id="UVa-9J-yp3"/>
+                            <constraint firstItem="WEf-kW-hVL" firstAttribute="height" secondItem="rZU-KP-uiu" secondAttribute="height" multiplier="0.2742" id="UVa-9J-yp3"/>
                             <constraint firstItem="ynm-7f-P9m" firstAttribute="width" secondItem="rZU-KP-uiu" secondAttribute="width" multiplier="0.415459" id="WoY-gd-eEw"/>
                             <constraint firstItem="NDy-CU-EJF" firstAttribute="top" secondItem="Ons-eA-cnK" secondAttribute="bottom" id="ZGo-t8-ej9"/>
                             <constraint firstItem="imv-gD-kFM" firstAttribute="centerY" secondItem="ynm-7f-P9m" secondAttribute="centerY" id="ZZv-Dl-8Tj"/>
-                            <constraint firstItem="VKU-0z-dDo" firstAttribute="height" secondItem="rZU-KP-uiu" secondAttribute="height" multiplier="0.0256696" id="eEA-gL-3dT"/>
                             <constraint firstItem="Ons-eA-cnK" firstAttribute="top" secondItem="rZU-KP-uiu" secondAttribute="top" constant="30" id="f0d-lC-A52"/>
                             <constraint firstAttribute="trailing" secondItem="WEf-kW-hVL" secondAttribute="trailing" id="jnv-8d-QBG"/>
+                            <constraint firstItem="0tO-rV-c3w" firstAttribute="centerX" secondItem="rZU-KP-uiu" secondAttribute="centerX" id="kZP-aJ-yQe"/>
                             <constraint firstItem="5L9-ht-EO7" firstAttribute="trailing" secondItem="SJ5-7Z-Jtu" secondAttribute="trailing" id="mG9-HI-Mvx"/>
                             <constraint firstAttribute="bottom" secondItem="NDy-CU-EJF" secondAttribute="bottom" id="mbQ-5e-ZBT"/>
                             <constraint firstItem="NDy-CU-EJF" firstAttribute="leading" secondItem="rZU-KP-uiu" secondAttribute="leading" id="p3N-Cx-ubA"/>
                             <constraint firstItem="VKU-0z-dDo" firstAttribute="top" secondItem="5L9-ht-EO7" secondAttribute="top" constant="30" id="pBY-RZ-Dvc"/>
+                            <constraint firstItem="6Tq-uR-9q5" firstAttribute="centerX" secondItem="ynm-7f-P9m" secondAttribute="centerX" id="quk-3R-2yL"/>
                             <constraint firstAttribute="bottom" secondItem="trj-Jg-AtJ" secondAttribute="bottom" id="r3l-HO-JvZ"/>
                             <constraint firstItem="Ons-eA-cnK" firstAttribute="leading" secondItem="rZU-KP-uiu" secondAttribute="leading" id="sbh-Gb-uqc"/>
                             <constraint firstAttribute="trailing" secondItem="Ons-eA-cnK" secondAttribute="trailing" id="uHT-MG-rZv"/>
                             <constraint firstItem="ynm-7f-P9m" firstAttribute="centerX" secondItem="rZU-KP-uiu" secondAttribute="centerX" id="wHQ-ov-rFV"/>
-                            <constraint firstItem="SJ5-7Z-Jtu" firstAttribute="top" secondItem="5L9-ht-EO7" secondAttribute="top" constant="120" id="yCw-0t-0Io"/>
                             <constraint firstItem="trj-Jg-AtJ" firstAttribute="leading" secondItem="rZU-KP-uiu" secondAttribute="leading" id="zie-W3-Zxu"/>
                         </constraints>
                     </view>
@@ -1027,6 +1047,7 @@ consectetur adipiscing elit</string>
         <image name="avatarChat" width="163" height="181"/>
         <image name="back" width="12" height="23"/>
         <image name="background" width="414" height="896"/>
+        <image name="badgedImage" width="37" height="28"/>
         <image name="chat" width="32" height="21"/>
         <image name="chatBackground" width="414" height="896"/>
         <image name="chatHeader" width="414" height="234"/>
@@ -1035,6 +1056,9 @@ consectetur adipiscing elit</string>
         <image name="grayHeart" width="49" height="47"/>
         <image name="greenVarBubble" width="339" height="45"/>
         <image name="heart" width="204" height="260"/>
+        <image name="iconBotAvatar" width="130" height="130"/>
+        <image name="iconHeartProgress" width="52" height="46"/>
+        <image name="iconProgressCircle" width="163" height="163"/>
         <image name="image" width="31" height="23"/>
         <image name="koloda" width="28" height="32"/>
         <image name="kolodabackground" width="414" height="444"/>
