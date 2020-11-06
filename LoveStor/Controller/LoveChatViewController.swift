@@ -10,12 +10,13 @@ import MessageKit
 import InputBarAccessoryView
 
 enum ChatMessageType {
-  case small
-  case big
-  case sticker
-  case selfSmall
-  case selfSmallCustom
-  case selfSticker(UIImage)
+    case small
+    case big
+    case sticker
+    case selfSmall
+    case selfSmallCustom
+    case selfSticker(UIImage)
+    case selfBig
 }
 
 class LoveChatViewController: UIViewController {
@@ -80,7 +81,7 @@ class LoveChatViewController: UIViewController {
                   UIImage(named: "iceStiker"),
                   UIImage(named: "retroStiker"),
                   UIImage(named: "starStiker")]
-  var messages:[ChatMessageType] = [.small,.big,.sticker,.selfSmall]
+    var messages:[ChatMessageType] = [.small,.big,.sticker,.selfSmall, .selfBig]
   
   var variant:Bool = false
   
@@ -151,29 +152,32 @@ extension LoveChatViewController: UITableViewDelegate, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return messages.count
-  }
+      return messages.count
+    }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
     func checkCell() -> UITableViewCell {
-      switch messages[indexPath.row] {
-      case .small: return tableView.dequeueReusableCell(withIdentifier: "littleBubbleCell", for: indexPath) as! SmallBubleTableViewCell
-      case .big: return tableView.dequeueReusableCell(withIdentifier: "bigBubbleCell", for: indexPath) as! BigBubleTableViewCell
-      case .sticker: return tableView.dequeueReusableCell(withIdentifier: "stickerBubbleCell", for: indexPath) as! StickerTableViewCell
-      case .selfSmall: let cell = tableView.dequeueReusableCell(withIdentifier: "selfLittleCell", for: indexPath) as! SelfSmallTableViewCell
-        cell.configureCell("", isCustom: false)
-        return cell
-      case .selfSmallCustom: let cell = tableView.dequeueReusableCell(withIdentifier: "selfLittleCell", for: indexPath) as! SelfSmallTableViewCell
-        cell.configureCell(variant ? whiteText.text! : greenText.text!, isCustom: true)
-        return cell
-      case .selfSticker(let image):
-        let cell = tableView.dequeueReusableCell(withIdentifier: "selfStickerCell", for: indexPath) as! SelfStickerTableViewCell
-        cell.setImage(image)
-        return cell
-        
+        switch messages[indexPath.row] {
+        case .small: return tableView.dequeueReusableCell(withIdentifier: "littleBubbleCell", for:  indexPath) as! SmallBubleTableViewCell
+        case .big: return tableView.dequeueReusableCell(withIdentifier: "bigBubbleCell", for: indexPath)    as! BigBubleTableViewCell
+        case .sticker: return tableView.dequeueReusableCell(withIdentifier: "stickerBubbleCell", for:   indexPath) as! StickerTableViewCell
+        case .selfSmall: let cell = tableView.dequeueReusableCell(withIdentifier: "selfLittleCell", for:    indexPath) as! SelfSmallTableViewCell
+          cell.configureCell("", isCustom: false)
+          return cell
+        case .selfSmallCustom: let cell = tableView.dequeueReusableCell(withIdentifier: "selfLittleCell",   for: indexPath) as! SelfSmallTableViewCell
+          cell.configureCell(variant ? whiteText.text! : greenText.text!, isCustom: true)
+          return cell
+        case .selfBig:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "SelfBigBubleTableViewCell", for: indexPath) as! SelfBigBubleTableViewCell
+            return cell
+        case .selfSticker(let image):
+          let cell = tableView.dequeueReusableCell(withIdentifier: "selfStickerCell", for: indexPath) as! SelfStickerTableViewCell
+          cell.setImage(image)
+          return cell
+            
+            }
       }
+      return checkCell()
     }
-    return checkCell()
-  }
 }

@@ -42,6 +42,8 @@
 		43939AC125546BFD006A50B1 /* BasicChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43939AC025546BFD006A50B1 /* BasicChatViewController.swift */; };
 		43B57C612551ECBF00411588 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B57C602551ECBF00411588 /* LoaderViewController.swift */; };
 		43B57C722551EE5C00411588 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B57C712551EE5C00411588 /* SelectionViewController.swift */; };
+		43C35A2B2555C5C80062E115 /* SelfBigBubbleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C35A292555C5C80062E115 /* SelfBigBubbleTableViewCell.swift */; };
+		43C35A2C2555C5C80062E115 /* SelfBigBubbleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43C35A2A2555C5C80062E115 /* SelfBigBubbleTableViewCell.xib */; };
 		43EBAF7C2551D6340096FC69 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EBAF7B2551D6340096FC69 /* ChatVC.swift */; };
 		4DC476C0D0A904A18FF40187 /* Pods_LoveStor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 154CC5530A1B15B526DE1C92 /* Pods_LoveStor.framework */; };
 /* End PBXBuildFile section */
@@ -86,6 +88,8 @@
 		43939AC025546BFD006A50B1 /* BasicChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicChatViewController.swift; sourceTree = "<group>"; };
 		43B57C602551ECBF00411588 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
 		43B57C712551EE5C00411588 /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
+		43C35A292555C5C80062E115 /* SelfBigBubbleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfBigBubbleTableViewCell.swift; sourceTree = "<group>"; };
+		43C35A2A2555C5C80062E115 /* SelfBigBubbleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelfBigBubbleTableViewCell.xib; sourceTree = "<group>"; };
 		43EBAF7B2551D6340096FC69 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		E69256967628B0A67AD35F9E /* Pods-LoveStor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveStor.release.xcconfig"; path = "Target Support Files/Pods-LoveStor/Pods-LoveStor.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +122,7 @@
 				283297A02537144500F59EF0 /* SelfSmallTableViewCell.xib */,
 				283297AB25371DCA00F59EF0 /* SelfStickerTableViewCell.swift */,
 				283297AC25371DCA00F59EF0 /* SelfStickerTableViewCell.xib */,
+				43C35A282555C5830062E115 /* SelfBigBubbleTableViewCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -236,6 +241,15 @@
 			path = Chat;
 			sourceTree = "<group>";
 		};
+		43C35A282555C5830062E115 /* SelfBigBubbleTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				43C35A292555C5C80062E115 /* SelfBigBubbleTableViewCell.swift */,
+				43C35A2A2555C5C80062E115 /* SelfBigBubbleTableViewCell.xib */,
+			);
+			path = SelfBigBubbleTableViewCell;
+			sourceTree = "<group>";
+		};
 		A8CAEBA3E88A345E135356CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +328,7 @@
 			files = (
 				28740B562530B4E90090DCC1 /* LaunchScreen.storyboard in Resources */,
 				283297A22537144500F59EF0 /* SelfSmallTableViewCell.xib in Resources */,
+				43C35A2C2555C5C80062E115 /* SelfBigBubbleTableViewCell.xib in Resources */,
 				4378FA28254EF0D2001600B8 /* KolodaCardView.xib in Resources */,
 				2832979725370A2E00F59EF0 /* BigBubleTableViewCell.xib in Resources */,
 				2832979D2537111F00F59EF0 /* StickerTableViewCell.xib in Resources */,
@@ -397,6 +412,7 @@
 				283297572535992B00F59EF0 /* MockMessage.swift in Sources */,
 				28740B662530C26F0090DCC1 /* GradientView.swift in Sources */,
 				28740B4C2530B4E40090DCC1 /* SceneDelegate.swift in Sources */,
+				43C35A2B2555C5C80062E115 /* SelfBigBubbleTableViewCell.swift in Sources */,
 				283297AD25371DCA00F59EF0 /* SelfStickerTableViewCell.swift in Sources */,
 				43B57C612551ECBF00411588 /* LoaderViewController.swift in Sources */,
 				283297A12537144500F59EF0 /* SelfSmallTableViewCell.swift in Sources */,

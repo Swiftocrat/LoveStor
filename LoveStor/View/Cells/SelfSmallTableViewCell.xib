@@ -20,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IML-jp-Bqc" userLabel="Short bubble view">
                         <rect key="frame" x="512.5" y="5.5" width="155.5" height="45"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selfBubble" translatesAutoresizingMaskIntoConstraints="NO" id="y9u-ZG-6mN">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selfBubble" translatesAutoresizingMaskIntoConstraints="NO" id="y9u-ZG-6mN">
                                 <rect key="frame" x="0.0" y="0.0" width="155.5" height="45"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
