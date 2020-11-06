@@ -39,6 +39,7 @@
 		28BC8FC0253DE41C0055E21D /* Messenger-Pigeons in Resources */ = {isa = PBXBuildFile; fileRef = 28BC8FBD253DDCB90055E21D /* Messenger-Pigeons */; };
 		4378FA24254EF0C7001600B8 /* KolodaCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4378FA23254EF0C7001600B8 /* KolodaCardView.swift */; };
 		4378FA28254EF0D2001600B8 /* KolodaCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4378FA27254EF0D2001600B8 /* KolodaCardView.xib */; };
+		43939AC125546BFD006A50B1 /* BasicChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43939AC025546BFD006A50B1 /* BasicChatViewController.swift */; };
 		43B57C612551ECBF00411588 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B57C602551ECBF00411588 /* LoaderViewController.swift */; };
 		43B57C722551EE5C00411588 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B57C712551EE5C00411588 /* SelectionViewController.swift */; };
 		43EBAF7C2551D6340096FC69 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EBAF7B2551D6340096FC69 /* ChatVC.swift */; };
@@ -82,6 +83,7 @@
 		2FCB1C1A223763FF29BD58A5 /* Pods-LoveStor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveStor.debug.xcconfig"; path = "Target Support Files/Pods-LoveStor/Pods-LoveStor.debug.xcconfig"; sourceTree = "<group>"; };
 		4378FA23254EF0C7001600B8 /* KolodaCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KolodaCardView.swift; sourceTree = "<group>"; };
 		4378FA27254EF0D2001600B8 /* KolodaCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KolodaCardView.xib; sourceTree = "<group>"; };
+		43939AC025546BFD006A50B1 /* BasicChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicChatViewController.swift; sourceTree = "<group>"; };
 		43B57C602551ECBF00411588 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
 		43B57C712551EE5C00411588 /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 		43EBAF7B2551D6340096FC69 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		286AAC642548D04F00E7FD21 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				43939ABF25546BEF006A50B1 /* Chat */,
 				28740B4D2530B4E40090DCC1 /* ViewController.swift */,
 				43EBAF7B2551D6340096FC69 /* ChatVC.swift */,
 				28329750253598DF00F59EF0 /* ChatViewController.swift */,
@@ -223,6 +226,14 @@
 				4378FA27254EF0D2001600B8 /* KolodaCardView.xib */,
 			);
 			path = KolodaView;
+			sourceTree = "<group>";
+		};
+		43939ABF25546BEF006A50B1 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				43939AC025546BFD006A50B1 /* BasicChatViewController.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		A8CAEBA3E88A345E135356CF /* Frameworks */ = {
@@ -366,6 +377,7 @@
 			files = (
 				283297582535992B00F59EF0 /* MockUser.swift in Sources */,
 				2832976B2536F97E00F59EF0 /* SmallBubleTableViewCell.swift in Sources */,
+				43939AC125546BFD006A50B1 /* BasicChatViewController.swift in Sources */,
 				2832975E253599E600F59EF0 /* Lorem.swift in Sources */,
 				2832976525366D4500F59EF0 /* StickerCollectionViewCell.swift in Sources */,
 				283297282535053200F59EF0 /* StoriesViewController.swift in Sources */,

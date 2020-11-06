@@ -9,6 +9,9 @@ import UIKit
 
 class BigBubleTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var bubbleImageView: UIImageView!
+    @IBOutlet weak var bubbleTextView: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

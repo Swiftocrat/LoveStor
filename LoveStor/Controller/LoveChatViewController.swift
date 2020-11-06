@@ -176,8 +176,4 @@ extension LoveChatViewController: UITableViewDelegate, UITableViewDataSource {
     }
     return checkCell()
   }
-  
-  
 }
-
-
