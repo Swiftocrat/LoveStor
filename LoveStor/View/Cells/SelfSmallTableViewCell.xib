@@ -20,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IML-jp-Bqc" userLabel="Short bubble view">
                         <rect key="frame" x="507" y="5" width="161" height="45"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selfBubble" translatesAutoresizingMaskIntoConstraints="NO" id="y9u-ZG-6mN">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selfBubble" translatesAutoresizingMaskIntoConstraints="NO" id="y9u-ZG-6mN">
                                 <rect key="frame" x="0.0" y="0.0" width="161" height="45"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -102,8 +102,8 @@
                 <constraints>
                     <constraint firstItem="IML-jp-Bqc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="02l-VG-Bv7"/>
                     <constraint firstAttribute="trailing" secondItem="IML-jp-Bqc" secondAttribute="trailing" constant="16" id="LWo-lv-Ibv"/>
-                    <constraint firstAttribute="bottom" secondItem="IML-jp-Bqc" secondAttribute="bottom" constant="5" id="Vjm-c8-Odo"/>
-                    <constraint firstAttribute="bottom" secondItem="jdh-fS-mJh" secondAttribute="bottom" constant="5" id="hdq-is-LFx"/>
+                    <constraint firstAttribute="bottom" secondItem="IML-jp-Bqc" secondAttribute="bottom" id="Vjm-c8-Odo"/>
+                    <constraint firstAttribute="bottom" secondItem="jdh-fS-mJh" secondAttribute="bottom" id="hdq-is-LFx"/>
                     <constraint firstItem="jdh-fS-mJh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="l19-ey-CLV"/>
                     <constraint firstAttribute="trailing" secondItem="jdh-fS-mJh" secondAttribute="trailing" constant="16" id="paU-8d-Rm6"/>
                 </constraints>
@@ -121,6 +121,6 @@
     </objects>
     <resources>
         <image name="selfBubble" width="146" height="45"/>
-        <image name="selfLong" width="344" height="45"/>
+        <image name="selfLong" width="336" height="45"/>
     </resources>
 </document>

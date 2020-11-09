@@ -30,6 +30,5 @@ class SelfSmallTableViewCell: UITableViewCell {
     shortLabel.isHidden = isCustom
     longBubble.isHidden = !isCustom
     longLabel.text = text
-  }
-    
+    }
 }
