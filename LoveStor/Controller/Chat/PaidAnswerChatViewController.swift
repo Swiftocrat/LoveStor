@@ -21,6 +21,7 @@ class PaidAnswerChatViewController: UIViewController {
         case selfBig
         case selfPaidSmall
         case selfPaidSmallCustom
+        case smallReaction
 //        case selfPaidBig
     }
     
@@ -28,17 +29,18 @@ class PaidAnswerChatViewController: UIViewController {
     @IBOutlet weak var chatTableView: UITableView! {
         didSet {
             chatTableView.do {
-              $0.allowsSelection = false
-              $0.separatorStyle = .none
-              $0.delegate = self
-              $0.dataSource = self
-              $0.register(UINib(nibName: "SmallBubleTableViewCell", bundle: nil), forCellReuseIdentifier: "littleBubbleCell")
-              $0.register(UINib(nibName: "BigBubleTableViewCell", bundle: nil), forCellReuseIdentifier: "bigBubbleCell")
-              $0.register(UINib(nibName: "StickerTableViewCell", bundle: nil), forCellReuseIdentifier:  "stickerBubbleCell")
-              $0.register(UINib(nibName: "SelfSmallTableViewCell", bundle: nil),    forCellReuseIdentifier: "selfLittleCell")
-              $0.register(UINib(nibName: "SelfStickerTableViewCell", bundle: nil), forCellReuseIdentifier: "selfStickerCell")
-                $0.register(UINib(nibName: "SelfBigBubbleTableViewCell", bundle: nil), forCellReuseIdentifier: "selfBigBubbleCell")
-              $0.backgroundColor = .clear
+                $0.allowsSelection = false
+                $0.separatorStyle = .none
+                $0.delegate = self
+                $0.dataSource = self
+                $0.register(UINib(nibName: "SmallBubleTableViewCell", bundle: nil),   forCellReuseIdentifier: "littleBubbleCell")
+                $0.register(UINib(nibName: "BigBubleTableViewCell", bundle: nil), forCellReuseIdentifier:   "bigBubbleCell")
+                $0.register(UINib(nibName: "StickerTableViewCell", bundle: nil), forCellReuseIdentifier:    "stickerBubbleCell")
+                $0.register(UINib(nibName: "SelfSmallTableViewCell", bundle: nil),      forCellReuseIdentifier: "selfLittleCell")
+                $0.register(UINib(nibName: "SelfStickerTableViewCell", bundle: nil),   forCellReuseIdentifier: "selfStickerCell")
+                $0.register(UINib(nibName: "SelfBigBubbleTableViewCell", bundle: nil),   forCellReuseIdentifier: "selfBigBubbleCell")
+                $0.register(UINib(nibName: "SmallWithReactionCell", bundle: nil),   forCellReuseIdentifier: "smallBubbleWithReactionCell")
+                $0.backgroundColor = .clear
             }
           }
         }
@@ -46,8 +48,10 @@ class PaidAnswerChatViewController: UIViewController {
     @IBOutlet weak var messageTextView: UITextView!
     @IBOutlet weak var paidMessageTextView: UITextView!
     
+    var showingReactionButton = true
     var responseIndex: IndexPath?
-    var messages: [PaidChatMessageType] = [.small, .big, .sticker, .big, .selfPaidSmall]
+    var messages: [PaidChatMessageType] = [.small, .big, .sticker, .big, .selfPaidSmall, .smallReaction]
+    
     override func viewDidLoad() {
           super.viewDidLoad()
     
@@ -73,8 +77,15 @@ class PaidAnswerChatViewController: UIViewController {
     }
     
     @objc func sendPaidMessage() {
-//      sendImageButton.pulsate()
       self.messages.append(.selfPaidSmallCustom)
+      self.chatTableView.beginUpdates()
+      self.chatTableView.insertRows(at: [IndexPath.init(row: messages.count - 1, section: 0)], with: .automatic)
+      self.chatTableView.endUpdates()
+      chatTableView.scrollTableViewToBottom(animated: true)
+    }
+    
+    @objc func sendMessageWithReaction() {
+      self.messages.append(.smallReaction)
       self.chatTableView.beginUpdates()
       self.chatTableView.insertRows(at: [IndexPath.init(row: messages.count - 1, section: 0)], with: .automatic)
       self.chatTableView.endUpdates()
@@ -91,7 +102,8 @@ extension PaidAnswerChatViewController: UITableViewDelegate, UITableViewDataSour
         switch messages[indexPath.row] {
         case .big, .selfBig: return 126
         case .sticker, .selfSticker: return 100
-        default: return 55
+        case .smallReaction: return 71
+        default: return 50
         }
     }
   
@@ -104,7 +116,9 @@ extension PaidAnswerChatViewController: UITableViewDelegate, UITableViewDataSour
             switch messages[indexPath.row] {
             case .small:
                 responseIndex = indexPath
-                return tableView.dequeueReusableCell(withIdentifier: "littleBubbleCell", for: indexPath) as! SmallBubleTableViewCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: "littleBubbleCell", for: indexPath) as! SmallBubleTableViewCell
+//                cell.configureCell(showsReactionButton: showingReactionButton)
+                return cell
             case .big:
             let cell = tableView.dequeueReusableCell(withIdentifier: "bigBubbleCell", for: indexPath) as! BigBubleTableViewCell
                 responseIndex = indexPath
@@ -113,7 +127,6 @@ extension PaidAnswerChatViewController: UITableViewDelegate, UITableViewDataSour
                 print("STICKER")
                 responseIndex = indexPath
                 return tableView.dequeueReusableCell(withIdentifier: "stickerBubbleCell", for: indexPath) as! StickerTableViewCell
-                
                 //MARK: --SELF
             case .selfSmall: let cell = tableView.dequeueReusableCell(withIdentifier: "selfLittleCell", for: indexPath) as! SelfSmallTableViewCell
                 print("selfBubble")
@@ -144,7 +157,6 @@ extension PaidAnswerChatViewController: UITableViewDelegate, UITableViewDataSour
                 let cell = tableView.dequeueReusableCell(withIdentifier: "selfStickerCell", for: indexPath) as! SelfStickerTableViewCell
                 cell.setImage(image)
                 return cell
-                
             //MARK: --Paid
             case .selfPaidSmall:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "selfLittleCell", for: indexPath) as!  SelfSmallTableViewCell
@@ -162,6 +174,11 @@ extension PaidAnswerChatViewController: UITableViewDelegate, UITableViewDataSour
                         cell.longBubble.image = UIImage(named: "selfGreenBubbleLongReversed")
                     }
                     return cell
+            case .smallReaction:
+                responseIndex = indexPath
+                let cell = tableView.dequeueReusableCell(withIdentifier: "smallBubbleWithReactionCell", for: indexPath) as! SmallWithReactionCell
+//                cell.configureCell(showsReactionButton: showingReactionButton)
+                return cell
 //            case .selfPaidBig:
 //                let cell = tableView.dequeueReusableCell(withIdentifier: "selfBigBubbleCell", for: indexPath) as! SelfBigBubleTableViewCell
 //                    cell.bubbleTextView.text = messageTextView.text

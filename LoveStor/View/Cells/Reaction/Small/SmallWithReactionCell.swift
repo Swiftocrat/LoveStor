@@ -1,13 +1,16 @@
 //
-//  SmallBubleTableViewCell.swift
+//  SmallWithReactionCell.swift
 //  LoveStor
 //
-//  Created by Yaroslav Vushnyak on 14.10.2020.
+//  Created by ****** ****** on 11.11.2020.
 //
 
 import UIKit
 
-class SmallBubleTableViewCell: UITableViewCell {
+class SmallWithReactionCell: UITableViewCell {
+
+    @IBOutlet weak var reactionButton: UIButton!
+    @IBOutlet weak var rectionButtonHeightConstraint: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
