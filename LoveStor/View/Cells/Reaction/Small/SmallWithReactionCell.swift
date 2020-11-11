@@ -5,6 +5,7 @@
 //  Created by ****** ****** on 11.11.2020.
 //
 
+import Popover
 import UIKit
 
 class SmallWithReactionCell: UITableViewCell {
@@ -37,7 +38,46 @@ class SmallWithReactionCell: UITableViewCell {
 //            rectionButtonHeightConstraint.constant = 0
 //        }
 //    }
-    
     @IBAction func reactionButtonTapped(_ sender: Any) {
+        let aView = UIView(frame: CGRect(x: 0, y: 0, width: 48, height: 106))
+        let happySmileButton = UIButton(frame: CGRect(x: 0, y: 0, width: 36, height: 36))
+        let positiveSmileButton = UIButton(frame: CGRect(x: 0, y: 0, width: 36, height: 36))
+        let stackView = UIStackView(frame: CGRect(x: 0, y: 0, width: 36, height: 82))
+        stackView.axis = .vertical
+        aView.addSubview(stackView)
+        stackView.center = aView.center
+        stackView.distribution = .fillEqually
+        stackView.spacing = 10
+        stackView.addArrangedSubview(happySmileButton)
+        stackView.addArrangedSubview(positiveSmileButton)
+        happySmileButton.setImage(UIImage(named: "smileHappy"), for: .normal)
+        positiveSmileButton.setImage(UIImage(named: "smilePositive"), for: .normal)
+        
+        
+        let options = [
+          .type(.up),
+          .cornerRadius(8),
+          .animationIn(0.3),
+          .arrowSize(CGSize(width: 10.0, height: 4.0))
+          ] as [PopoverOption]
+        let popover = Popover(options: options, showHandler: nil, dismissHandler: nil)
+        let setHappySmile = UIAction { _ in
+            self.reactionButton.setImage(happySmileButton.image(for: .normal), for: .normal)
+            self.reactionButton.isUserInteractionEnabled = false
+            popover.dismiss()
+        }
+        let setPositiveSmile = UIAction { _ in
+            self.reactionButton.setImage(happySmileButton.image(for: .normal), for: .normal)
+            self.reactionButton.isUserInteractionEnabled = false
+            popover.dismiss()
+        }
+        if #available(iOS 14.0, *) {
+            happySmileButton.addAction(setHappySmile, for: .touchUpInside)
+            
+        }
+        if #available(iOS 14.0, *) {
+            positiveSmileButton.addAction(setPositiveSmile, for: .touchUpInside)
+        }
+        popover.show(aView, fromView: self.reactionButton)
     }
 }

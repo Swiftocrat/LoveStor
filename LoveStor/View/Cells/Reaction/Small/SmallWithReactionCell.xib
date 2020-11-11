@@ -45,7 +45,7 @@
                         </constraints>
                         <state key="normal" image="reactionButton"/>
                         <connections>
-                            <action selector="reactionButtonTapped:" destination="YjQ-Cz-IaU" eventType="touchUpInside" id="Gmr-qi-nua"/>
+                            <action selector="reactionButtonTapped:" destination="YjQ-Cz-IaU" eventType="touchUpInside" id="qye-RJ-Wgy"/>
                         </connections>
                     </button>
                 </subviews>
