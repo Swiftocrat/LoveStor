@@ -37,6 +37,8 @@
 		28740B662530C26F0090DCC1 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28740B652530C26F0090DCC1 /* GradientView.swift */; };
 		28740B692531222A0090DCC1 /* KolodaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28740B682531222A0090DCC1 /* KolodaViewController.swift */; };
 		28BC8FC0253DE41C0055E21D /* Messenger-Pigeons in Resources */ = {isa = PBXBuildFile; fileRef = 28BC8FBD253DDCB90055E21D /* Messenger-Pigeons */; };
+		4304A8E0255DD8CE00B45A8B /* OfflinePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4304A8DF255DD8CE00B45A8B /* OfflinePopupViewController.swift */; };
+		4304A8E3255DDEE200B45A8B /* Geometria-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4304A8E2255DDEE200B45A8B /* Geometria-Light.ttf */; };
 		4320C7FE255C66B4004F6EE6 /* SFCompactText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4320C7FD255C66B4004F6EE6 /* SFCompactText-Regular.ttf */; };
 		4320C801255C699F004F6EE6 /* ReactionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4320C800255C699F004F6EE6 /* ReactionDelegate.swift */; };
 		432DB738255D37F200507126 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432DB736255D37F200507126 /* PhotoTableViewCell.swift */; };
@@ -91,6 +93,8 @@
 		28740B682531222A0090DCC1 /* KolodaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KolodaViewController.swift; sourceTree = "<group>"; };
 		28BC8FBD253DDCB90055E21D /* Messenger-Pigeons */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Messenger-Pigeons"; sourceTree = "<group>"; };
 		2FCB1C1A223763FF29BD58A5 /* Pods-LoveStor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveStor.debug.xcconfig"; path = "Target Support Files/Pods-LoveStor/Pods-LoveStor.debug.xcconfig"; sourceTree = "<group>"; };
+		4304A8DF255DD8CE00B45A8B /* OfflinePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflinePopupViewController.swift; sourceTree = "<group>"; };
+		4304A8E2255DDEE200B45A8B /* Geometria-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Geometria-Light.ttf"; sourceTree = "<group>"; };
 		4320C7FD255C66B4004F6EE6 /* SFCompactText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactText-Regular.ttf"; sourceTree = "<group>"; };
 		4320C800255C699F004F6EE6 /* ReactionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionDelegate.swift; sourceTree = "<group>"; };
 		432DB736255D37F200507126 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
@@ -247,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				4320C7FD255C66B4004F6EE6 /* SFCompactText-Regular.ttf */,
+				4304A8E2255DDEE200B45A8B /* Geometria-Light.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -293,6 +298,7 @@
 				43939AC025546BFD006A50B1 /* BasicChatViewController.swift */,
 				43BC1BC12555DB0C00D0F13D /* PaidAnswerChatViewController.swift */,
 				43705AB5255C73E90025E3EA /* PhotoMessageViewController.swift */,
+				4304A8DF255DD8CE00B45A8B /* OfflinePopupViewController.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -383,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28740B562530B4E90090DCC1 /* LaunchScreen.storyboard in Resources */,
+				4304A8E3255DDEE200B45A8B /* Geometria-Light.ttf in Resources */,
 				283297A22537144500F59EF0 /* SelfSmallTableViewCell.xib in Resources */,
 				43C35A2C2555C5C80062E115 /* SelfBigBubbleTableViewCell.xib in Resources */,
 				4378FA28254EF0D2001600B8 /* KolodaCardView.xib in Resources */,
@@ -451,6 +458,7 @@
 			files = (
 				283297582535992B00F59EF0 /* MockUser.swift in Sources */,
 				2832976B2536F97E00F59EF0 /* SmallBubleTableViewCell.swift in Sources */,
+				4304A8E0255DD8CE00B45A8B /* OfflinePopupViewController.swift in Sources */,
 				43939AC125546BFD006A50B1 /* BasicChatViewController.swift in Sources */,
 				2832975E253599E600F59EF0 /* Lorem.swift in Sources */,
 				2832976525366D4500F59EF0 /* StickerCollectionViewCell.swift in Sources */,

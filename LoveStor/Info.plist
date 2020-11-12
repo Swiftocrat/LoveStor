@@ -26,6 +26,7 @@
 	<array>
 		<string>Messenger-Pigeons.ttf</string>
 		<string>SFCompactText-Regular.ttf</string>
+		<string>Geometria-Light.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
