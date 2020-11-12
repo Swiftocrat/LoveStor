@@ -18,20 +18,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="littleAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="ucx-Wm-Vp9">
-                        <rect key="frame" x="10" y="0.0" width="40" height="40"/>
+                        <rect key="frame" x="10" y="5" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="64H-o1-L7r"/>
                             <constraint firstAttribute="width" constant="40" id="SWd-cj-ajR"/>
                         </constraints>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apY-Ow-3kz" userLabel="Bubble view">
-                        <rect key="frame" x="56" y="2" width="303" height="130"/>
+                        <rect key="frame" x="56" y="5" width="303" height="129"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bigBubble" translatesAutoresizingMaskIntoConstraints="NO" id="TkR-kw-9uQ">
-                                <rect key="frame" x="0.0" y="0.0" width="303" height="130"/>
+                                <rect key="frame" x="0.0" y="0.0" width="303" height="129"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yfV-N0-HwS">
-                                <rect key="frame" x="19" y="11" width="268" height="108"/>
+                                <rect key="frame" x="19" y="11" width="268" height="107.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <attributedString key="attributedText">
                                     <fragment content="My name is Aida. Lorem ipsum  dolor sit amet, consectetur  adipiscing elit, sed do eiusmod ">
@@ -60,11 +60,11 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="apY-Ow-3kz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="AQ9-9H-LH2"/>
+                    <constraint firstItem="apY-Ow-3kz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="AQ9-9H-LH2"/>
                     <constraint firstItem="ucx-Wm-Vp9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="HZv-Si-piP"/>
-                    <constraint firstAttribute="bottom" secondItem="apY-Ow-3kz" secondAttribute="bottom" constant="2" id="aJ9-xn-d5l"/>
+                    <constraint firstAttribute="bottom" secondItem="apY-Ow-3kz" secondAttribute="bottom" id="aJ9-xn-d5l"/>
                     <constraint firstItem="apY-Ow-3kz" firstAttribute="leading" secondItem="ucx-Wm-Vp9" secondAttribute="trailing" constant="6" id="iqL-MJ-GJz"/>
-                    <constraint firstItem="ucx-Wm-Vp9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kTV-PE-Oag"/>
+                    <constraint firstItem="ucx-Wm-Vp9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="kTV-PE-Oag"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

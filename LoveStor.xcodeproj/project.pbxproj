@@ -37,6 +37,11 @@
 		28740B662530C26F0090DCC1 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28740B652530C26F0090DCC1 /* GradientView.swift */; };
 		28740B692531222A0090DCC1 /* KolodaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28740B682531222A0090DCC1 /* KolodaViewController.swift */; };
 		28BC8FC0253DE41C0055E21D /* Messenger-Pigeons in Resources */ = {isa = PBXBuildFile; fileRef = 28BC8FBD253DDCB90055E21D /* Messenger-Pigeons */; };
+		4320C7FE255C66B4004F6EE6 /* SFCompactText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4320C7FD255C66B4004F6EE6 /* SFCompactText-Regular.ttf */; };
+		4320C801255C699F004F6EE6 /* ReactionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4320C800255C699F004F6EE6 /* ReactionDelegate.swift */; };
+		432DB738255D37F200507126 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432DB736255D37F200507126 /* PhotoTableViewCell.swift */; };
+		432DB739255D37F200507126 /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 432DB737255D37F200507126 /* PhotoTableViewCell.xib */; };
+		43705AB6255C73E90025E3EA /* PhotoMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43705AB5255C73E90025E3EA /* PhotoMessageViewController.swift */; };
 		43749567255BCC6B00B267A6 /* SmallWithReactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43749565255BCC6B00B267A6 /* SmallWithReactionCell.swift */; };
 		43749568255BCC6B00B267A6 /* SmallWithReactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43749566255BCC6B00B267A6 /* SmallWithReactionCell.xib */; };
 		4378FA24254EF0C7001600B8 /* KolodaCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4378FA23254EF0C7001600B8 /* KolodaCardView.swift */; };
@@ -86,6 +91,11 @@
 		28740B682531222A0090DCC1 /* KolodaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KolodaViewController.swift; sourceTree = "<group>"; };
 		28BC8FBD253DDCB90055E21D /* Messenger-Pigeons */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Messenger-Pigeons"; sourceTree = "<group>"; };
 		2FCB1C1A223763FF29BD58A5 /* Pods-LoveStor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveStor.debug.xcconfig"; path = "Target Support Files/Pods-LoveStor/Pods-LoveStor.debug.xcconfig"; sourceTree = "<group>"; };
+		4320C7FD255C66B4004F6EE6 /* SFCompactText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFCompactText-Regular.ttf"; sourceTree = "<group>"; };
+		4320C800255C699F004F6EE6 /* ReactionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionDelegate.swift; sourceTree = "<group>"; };
+		432DB736255D37F200507126 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		432DB737255D37F200507126 /* PhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTableViewCell.xib; sourceTree = "<group>"; };
+		43705AB5255C73E90025E3EA /* PhotoMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMessageViewController.swift; sourceTree = "<group>"; };
 		43749565255BCC6B00B267A6 /* SmallWithReactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWithReactionCell.swift; sourceTree = "<group>"; };
 		43749566255BCC6B00B267A6 /* SmallWithReactionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmallWithReactionCell.xib; sourceTree = "<group>"; };
 		4378FA23254EF0C7001600B8 /* KolodaCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KolodaCardView.swift; sourceTree = "<group>"; };
@@ -119,6 +129,7 @@
 				2832976325366D4500F59EF0 /* StickerCollectionViewCell.swift */,
 				2832976425366D4500F59EF0 /* StickerCollectionViewCell.xib */,
 				283297692536F97E00F59EF0 /* SmallBubleTableViewCell.swift */,
+				43705AAE255C727D0025E3EA /* Photo */,
 				43749563255BCC2A00B267A6 /* Reaction */,
 				2832976A2536F97E00F59EF0 /* SmallBubleTableViewCell.xib */,
 				2832979425370A2E00F59EF0 /* BigBubleTableViewCell.swift */,
@@ -153,6 +164,7 @@
 		286AAC652548D14600E7FD21 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4320C7FC255C6425004F6EE6 /* Fonts */,
 				28740B522530B4E90090DCC1 /* Assets.xcassets */,
 				28BC8FBD253DDCB90055E21D /* Messenger-Pigeons */,
 			);
@@ -231,6 +243,23 @@
 			path = LoveStor;
 			sourceTree = "<group>";
 		};
+		4320C7FC255C6425004F6EE6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4320C7FD255C66B4004F6EE6 /* SFCompactText-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		43705AAE255C727D0025E3EA /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				432DB736255D37F200507126 /* PhotoTableViewCell.swift */,
+				432DB737255D37F200507126 /* PhotoTableViewCell.xib */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
 		43749563255BCC2A00B267A6 /* Reaction */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				43749565255BCC6B00B267A6 /* SmallWithReactionCell.swift */,
+				4320C800255C699F004F6EE6 /* ReactionDelegate.swift */,
 				43749566255BCC6B00B267A6 /* SmallWithReactionCell.xib */,
 			);
 			path = Small;
@@ -262,6 +292,7 @@
 			children = (
 				43939AC025546BFD006A50B1 /* BasicChatViewController.swift */,
 				43BC1BC12555DB0C00D0F13D /* PaidAnswerChatViewController.swift */,
+				43705AB5255C73E90025E3EA /* PhotoMessageViewController.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -362,6 +393,8 @@
 				2832976C2536F97E00F59EF0 /* SmallBubleTableViewCell.xib in Resources */,
 				283297AE25371DCA00F59EF0 /* SelfStickerTableViewCell.xib in Resources */,
 				28BC8FC0253DE41C0055E21D /* Messenger-Pigeons in Resources */,
+				4320C7FE255C66B4004F6EE6 /* SFCompactText-Regular.ttf in Resources */,
+				432DB739255D37F200507126 /* PhotoTableViewCell.xib in Resources */,
 				43749568255BCC6B00B267A6 /* SmallWithReactionCell.xib in Resources */,
 				28740B512530B4E40090DCC1 /* Main.storyboard in Resources */,
 			);
@@ -424,6 +457,7 @@
 				283297282535053200F59EF0 /* StoriesViewController.swift in Sources */,
 				4378FA24254EF0C7001600B8 /* KolodaCardView.swift in Sources */,
 				43EBAF7C2551D6340096FC69 /* ChatVC.swift in Sources */,
+				4320C801255C699F004F6EE6 /* ReactionDelegate.swift in Sources */,
 				2832979625370A2E00F59EF0 /* BigBubleTableViewCell.swift in Sources */,
 				283297592535992B00F59EF0 /* MockSocket.swift in Sources */,
 				283297392535955300F59EF0 /* LoveChatViewController.swift in Sources */,
@@ -432,7 +466,9 @@
 				43BC1BC22555DB0C00D0F13D /* PaidAnswerChatViewController.swift in Sources */,
 				2832975F253599E600F59EF0 /* SampleData.swift in Sources */,
 				43B57C722551EE5C00411588 /* SelectionViewController.swift in Sources */,
+				432DB738255D37F200507126 /* PhotoTableViewCell.swift in Sources */,
 				2832979C2537111F00F59EF0 /* StickerTableViewCell.swift in Sources */,
+				43705AB6255C73E90025E3EA /* PhotoMessageViewController.swift in Sources */,
 				28740B4A2530B4E40090DCC1 /* AppDelegate.swift in Sources */,
 				28740B692531222A0090DCC1 /* KolodaViewController.swift in Sources */,
 				286AAC712548D2EC00E7FD21 /* LoveStorView.swift in Sources */,

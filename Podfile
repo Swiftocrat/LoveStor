@@ -11,5 +11,6 @@ target 'LoveStor' do
   pod 'Then'
   pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
   pod 'Popover'
+  pod 'VisualEffectView'
   
 end

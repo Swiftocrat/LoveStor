@@ -13,6 +13,8 @@ class SmallWithReactionCell: UITableViewCell {
     @IBOutlet weak var reactionButton: UIButton!
     @IBOutlet weak var rectionButtonHeightConstraint: NSLayoutConstraint!
     
+    weak var delegate: ReactionDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -52,8 +54,6 @@ class SmallWithReactionCell: UITableViewCell {
         stackView.addArrangedSubview(positiveSmileButton)
         happySmileButton.setImage(UIImage(named: "smileHappy"), for: .normal)
         positiveSmileButton.setImage(UIImage(named: "smilePositive"), for: .normal)
-        
-        
         let options = [
           .type(.up),
           .cornerRadius(8),
@@ -65,18 +65,18 @@ class SmallWithReactionCell: UITableViewCell {
             self.reactionButton.setImage(happySmileButton.image(for: .normal), for: .normal)
             self.reactionButton.isUserInteractionEnabled = false
             popover.dismiss()
+            self.delegate?.showPopup()
         }
         let setPositiveSmile = UIAction { _ in
             self.reactionButton.setImage(happySmileButton.image(for: .normal), for: .normal)
             self.reactionButton.isUserInteractionEnabled = false
             popover.dismiss()
+            self.delegate?.showPopup()
         }
         if #available(iOS 14.0, *) {
             happySmileButton.addAction(setHappySmile, for: .touchUpInside)
-            
-        }
-        if #available(iOS 14.0, *) {
             positiveSmileButton.addAction(setPositiveSmile, for: .touchUpInside)
+            
         }
         popover.show(aView, fromView: self.reactionButton)
     }

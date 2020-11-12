@@ -1,17 +1,15 @@
 //
-//  PaidAnswerChatViewController.swift
+//  PhotoMessageViewController.swift
 //  LoveStor
 //
-//  Created by ***** ****** on 13.10.2020.
+//  Created by ****** ****** on 11.11.2020.
 //
 
 import UIKit
-import MessageKit
-import InputBarAccessoryView
 
-class PaidAnswerChatViewController: UIViewController {
+class PhotoMessageViewController: UIViewController {
     
-    enum PaidChatMessageType {
+    enum ChatMessageTypeWithPhoto {
         case small
         case big
         case sticker
@@ -19,11 +17,15 @@ class PaidAnswerChatViewController: UIViewController {
         case selfSmallCustom
         case selfSticker(UIImage)
         case selfBig
-        case selfPaidSmall
-        case selfPaidSmallCustom
-        case smallReaction
-//        case selfPaidBig
+        case photo
     }
+    
+    enum PressedButton {
+        case first
+        case second
+    }
+    
+    var pressedButton: PressedButton = .first
     
     @IBOutlet weak var chatHeader: UIImageView!
     @IBOutlet weak var chatTableView: UITableView! {
@@ -39,46 +41,39 @@ class PaidAnswerChatViewController: UIViewController {
                 $0.register(UINib(nibName: "SelfSmallTableViewCell", bundle: nil),      forCellReuseIdentifier: "selfLittleCell")
                 $0.register(UINib(nibName: "SelfStickerTableViewCell", bundle: nil),   forCellReuseIdentifier: "selfStickerCell")
                 $0.register(UINib(nibName: "SelfBigBubbleTableViewCell", bundle: nil),   forCellReuseIdentifier: "selfBigBubbleCell")
-                $0.register(UINib(nibName: "SmallWithReactionCell", bundle: nil),   forCellReuseIdentifier: "smallBubbleWithReactionCell")
+                $0.register(UINib(nibName: "PhotoTableViewCell", bundle: nil),   forCellReuseIdentifier: "photoCell")
                 $0.backgroundColor = .clear
             }
           }
         }
     
     @IBOutlet weak var messageTextView: UITextView!
-    @IBOutlet weak var paidMessageTextView: UITextView!
-    @IBOutlet weak var likePopupView: UIView!
+    @IBOutlet weak var secondMessageTextView: UITextView!
     
-    var showingReactionButton = true
     var responseIndex: IndexPath?
-    var messages: [PaidChatMessageType] = [.small, .big, .sticker, .big, .selfPaidSmall, .smallReaction]
-    
-    override func viewDidLoad() {
-          super.viewDidLoad()
-    
-        likePopupView.layer.opacity = 0
-        likePopupView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hidePopup)))
-    }
+    var messages: [ChatMessageTypeWithPhoto] = [.small, .big, .sticker, .big, .photo]
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
         DispatchQueue.main.async {
-            let index = IndexPath(row: self.messages.count-1, section: 0)
+            let index = IndexPath(row: self.messages.count - 1, section: 0)
             self.chatTableView.scrollToRow(at: index, at: .bottom, animated: false)
         }
-    }
-    
-    @IBAction func sendPaidMessageButtonTapped(_ sender: Any) {
-        sendPaidMessage()
     }
     
     @IBAction func sendMessageButtonTapped(_ sender: Any) {
         sendMessage()
     }
     
+    @IBAction func sendSecondMessageButtonTapped(_ sender: Any) {
+        sendSecondMessage()
+    }
+    
     @objc func sendMessage() {
+        
 //      sendImageButton.pulsate()
+        pressedButton = .first
       self.messages.append(.selfSmallCustom)
       self.chatTableView.beginUpdates()
       self.chatTableView.insertRows(at: [IndexPath.init(row: messages.count - 1, section: 0)], with: .automatic)
@@ -86,16 +81,9 @@ class PaidAnswerChatViewController: UIViewController {
       chatTableView.scrollTableViewToBottom(animated: true)
     }
     
-    @objc func sendPaidMessage() {
-      self.messages.append(.selfPaidSmallCustom)
-      self.chatTableView.beginUpdates()
-      self.chatTableView.insertRows(at: [IndexPath.init(row: messages.count - 1, section: 0)], with: .automatic)
-      self.chatTableView.endUpdates()
-      chatTableView.scrollTableViewToBottom(animated: true)
-    }
-    
-    @objc func sendMessageWithReaction() {
-      self.messages.append(.smallReaction)
+    @objc func sendSecondMessage() {
+        pressedButton = .second
+      self.messages.append(.selfSmallCustom)
       self.chatTableView.beginUpdates()
       self.chatTableView.insertRows(at: [IndexPath.init(row: messages.count - 1, section: 0)], with: .automatic)
       self.chatTableView.endUpdates()
@@ -105,20 +93,14 @@ class PaidAnswerChatViewController: UIViewController {
     @objc func returnBack() {
       navigationController?.popViewController(animated: true)
     }
-    
-    @objc func hidePopup() {
-        UIView.animate(withDuration: 0.2) {
-            self.likePopupView.layer.opacity = 0
-        }
-    }
 }
 
-extension PaidAnswerChatViewController: UITableViewDelegate, UITableViewDataSource {
+extension PhotoMessageViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch messages[indexPath.row] {
         case .big, .selfBig: return 126
         case .sticker, .selfSticker: return 100
-        case .smallReaction: return 71
+        case .photo: return 305
         default: return 50
         }
     }
@@ -156,7 +138,11 @@ extension PaidAnswerChatViewController: UITableViewDelegate, UITableViewDataSour
                 print("SelfSmallCustom")
                 cell.configureCell(messageTextView.text, isCustom: true)
                 cell.longBubble.image = UIImage(named: "selfLong")
-                cell.longLabel.text = messageTextView.text
+                if pressedButton == .first {
+                    cell.longLabel.text = messageTextView.text
+                } else {
+                    cell.longLabel.text = secondMessageTextView.text
+                }
                 let currentIndex = indexPath.row
                 if responseIndex?.row == currentIndex - 1 {
                     cell.longBubble.image = UIImage(named: "selfLongBubbleReversed")
@@ -173,48 +159,12 @@ extension PaidAnswerChatViewController: UITableViewDelegate, UITableViewDataSour
                 let cell = tableView.dequeueReusableCell(withIdentifier: "selfStickerCell", for: indexPath) as! SelfStickerTableViewCell
                 cell.setImage(image)
                 return cell
-            //MARK: --Paid
-            case .selfPaidSmall:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "selfLittleCell", for: indexPath) as!  SelfSmallTableViewCell
-                print("SelfPaidSmall")
-                cell.shortBubble.image = UIImage(named: "selfGreenBubble")
-                cell.configureCell("", isCustom: false)
-                return cell
-            case .selfPaidSmallCustom:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "selfLittleCell", for: indexPath) as! SelfSmallTableViewCell
-                    print("SelfSmallCustom")
-                    cell.configureCell(paidMessageTextView.text, isCustom: true)
-                    cell.longBubble.image = UIImage(named: "selfGreenBubbleLong")
-                    let currentIndex = indexPath.row
-                    if responseIndex?.row == currentIndex - 1 {
-                        cell.longBubble.image = UIImage(named: "selfGreenBubbleLongReversed")
-                    }
-                    return cell
-            case .smallReaction:
+            case .photo:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as! PhotoTableViewCell
                 responseIndex = indexPath
-                let cell = tableView.dequeueReusableCell(withIdentifier: "smallBubbleWithReactionCell", for: indexPath) as! SmallWithReactionCell
-                cell.delegate = self
-//                cell.configureCell(showsReactionButton: showingReactionButton)
                 return cell
-//            case .selfPaidBig:
-//                let cell = tableView.dequeueReusableCell(withIdentifier: "selfBigBubbleCell", for: indexPath) as! SelfBigBubleTableViewCell
-//                    cell.bubbleTextView.text = messageTextView.text
-//                cell.bubbleImageView.image = UIImage(named: "selfGreenBubbleBig")
-//                let currentIndex = indexPath.row
-//                if responseIndex?.row == currentIndex - 1 {
-//                    cell.bubbleImageView.image = UIImage(named: "selfGreenBubbleBigReversed")
-//                }
-//                return cell
             }
         }
         return checkCell()
-    }
-}
-
-extension PaidAnswerChatViewController: ReactionDelegate {
-    func showPopup() {
-        UIView.animate(withDuration: 0.2) {
-            self.likePopupView.layer.opacity = 1
-        }
     }
 }
