@@ -83,21 +83,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="cZX-Re-UbI">
-                                <rect key="frame" x="48" y="134" width="318" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyZ-tb-jDk">
-                                        <rect key="frame" x="0.0" y="0.0" width="170" height="30"/>
-                                        <state key="normal" title="5.5 Chat reaction tutorial"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2x-sT-4Q5">
-                                        <rect key="frame" x="190" y="0.0" width="128" height="30"/>
-                                        <state key="normal" title="5.6 Chat NPC likes"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="np9-nj-kdu">
-                                <rect key="frame" x="133" y="194" width="148" height="30"/>
+                                <rect key="frame" x="133" y="134" width="148" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYP-4g-mWR">
                                         <rect key="frame" x="0.0" y="0.0" width="148" height="30"/>
@@ -109,7 +96,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LsI-0w-Nfz">
-                                <rect key="frame" x="151" y="254" width="112" height="30"/>
+                                <rect key="frame" x="151" y="194" width="112" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VYP-vj-e5c">
                                         <rect key="frame" x="0.0" y="0.0" width="112" height="30"/>
@@ -124,14 +111,12 @@
                         <viewLayoutGuide key="safeArea" id="vTM-3K-gIV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="cZX-Re-UbI" firstAttribute="top" secondItem="a1t-cK-GeK" secondAttribute="bottom" constant="30" id="0hw-Id-zag"/>
-                            <constraint firstItem="cZX-Re-UbI" firstAttribute="centerX" secondItem="jkI-ur-RXP" secondAttribute="centerX" id="3oi-jL-Vvj"/>
                             <constraint firstItem="a1t-cK-GeK" firstAttribute="centerX" secondItem="jkI-ur-RXP" secondAttribute="centerX" id="5aI-5P-FmF"/>
                             <constraint firstItem="a1t-cK-GeK" firstAttribute="top" secondItem="vTM-3K-gIV" secondAttribute="top" constant="30" id="HeF-xC-AWI"/>
                             <constraint firstItem="np9-nj-kdu" firstAttribute="centerX" secondItem="jkI-ur-RXP" secondAttribute="centerX" id="Sag-RO-43j"/>
                             <constraint firstItem="LsI-0w-Nfz" firstAttribute="centerX" secondItem="jkI-ur-RXP" secondAttribute="centerX" id="VqS-pk-Jot"/>
+                            <constraint firstItem="np9-nj-kdu" firstAttribute="top" secondItem="a1t-cK-GeK" secondAttribute="bottom" constant="30" id="jiB-Kx-sem"/>
                             <constraint firstItem="LsI-0w-Nfz" firstAttribute="top" secondItem="np9-nj-kdu" secondAttribute="bottom" constant="30" id="sla-gY-gbb"/>
-                            <constraint firstItem="np9-nj-kdu" firstAttribute="top" secondItem="cZX-Re-UbI" secondAttribute="bottom" constant="30" id="vNM-c2-7J7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rjw-s4-u8Z"/>
