@@ -14,6 +14,7 @@ class PhotoTableViewCell: UITableViewCell {
     @IBOutlet weak var photoImageView: BlurImageView!
     @IBOutlet weak var tapToUnblurLabel: UILabel!
     @IBOutlet weak var unblurView: UIView!
+    @IBOutlet weak var backgroundShadowView: UIView!
     
     var visualEffectView: VisualEffectView!
     
@@ -38,6 +39,12 @@ class PhotoTableViewCell: UITableViewCell {
         visualEffectView.colorTintAlpha = 0.5
         visualEffectView.blurRadius = 10
         visualEffectView.scale = 1
+    }
+    
+    func configureShadow(removeShadow: Bool) {
+        if removeShadow {
+            backgroundShadowView.layer.opacity = 0
+        }
     }
     
     @IBAction func unblurButtonTapped(_ sender: Any) {

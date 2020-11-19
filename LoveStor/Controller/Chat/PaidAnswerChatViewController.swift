@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import MessageKit
 import InputBarAccessoryView
 
 class PaidAnswerChatViewController: UIViewController {
@@ -24,6 +23,8 @@ class PaidAnswerChatViewController: UIViewController {
         case smallReaction
 //        case selfPaidBig
     }
+    
+    var tutorialIsOver: Bool = false
     
     @IBOutlet weak var chatHeader: UIImageView!
     @IBOutlet weak var chatTableView: UITableView! {
@@ -44,21 +45,28 @@ class PaidAnswerChatViewController: UIViewController {
             }
           }
         }
-    
     @IBOutlet weak var messageTextView: UITextView!
     @IBOutlet weak var paidMessageTextView: UITextView!
     @IBOutlet weak var likePopupView: UIView!
+    @IBOutlet weak var backgroundShadowView: UIView!
+    @IBOutlet weak var insetShadowView: UIView!
+    @IBOutlet weak var fingerImageView: UIImageView!
     
     var showingReactionButton = true
+    var tableViewBackgroundShadowView: UIView?
     var responseIndex: IndexPath?
     var messages: [PaidChatMessageType] = [.small, .big, .sticker, .big, .selfPaidSmall, .smallReaction]
     
     override func viewDidLoad() {
-          super.viewDidLoad()
-    
+        super.viewDidLoad()
+        
+        chatTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 90, right: 0)
+        chatTableView.isScrollEnabled = false
+        insetShadowView.backgroundColor = .black
+        likePopupView.layer.opacity = 0.6
         likePopupView.layer.opacity = 0
         likePopupView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(hidePopup)))
-    }
+      }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -87,29 +95,30 @@ class PaidAnswerChatViewController: UIViewController {
     }
     
     @objc func sendPaidMessage() {
-      self.messages.append(.selfPaidSmallCustom)
-      self.chatTableView.beginUpdates()
-      self.chatTableView.insertRows(at: [IndexPath.init(row: messages.count - 1, section: 0)], with: .automatic)
-      self.chatTableView.endUpdates()
-      chatTableView.scrollTableViewToBottom(animated: true)
+        self.messages.append(.selfPaidSmallCustom)
+        self.chatTableView.beginUpdates()
+        self.chatTableView.insertRows(at: [IndexPath.init(row: messages.count - 1, section: 0)], with: .automatic)
+        self.chatTableView.endUpdates()
+        chatTableView.scrollTableViewToBottom(animated: true)
     }
     
     @objc func sendMessageWithReaction() {
-      self.messages.append(.smallReaction)
-      self.chatTableView.beginUpdates()
-      self.chatTableView.insertRows(at: [IndexPath.init(row: messages.count - 1, section: 0)], with: .automatic)
-      self.chatTableView.endUpdates()
-      chatTableView.scrollTableViewToBottom(animated: true)
+        self.messages.append(.smallReaction)
+        self.chatTableView.beginUpdates()
+        self.chatTableView.insertRows(at: [IndexPath.init(row: messages.count - 1, section: 0)],   with: .automatic)
+        self.chatTableView.endUpdates()
+        chatTableView.scrollTableViewToBottom(animated: true)
     }
     
     @objc func returnBack() {
-      navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
     @objc func hidePopup() {
         UIView.animate(withDuration: 0.2) {
             self.likePopupView.layer.opacity = 0
         }
+        hideBackgroundShadow()
     }
 }
 
@@ -134,20 +143,25 @@ extension PaidAnswerChatViewController: UITableViewDelegate, UITableViewDataSour
                 responseIndex = indexPath
                 let cell = tableView.dequeueReusableCell(withIdentifier: "littleBubbleCell", for: indexPath) as! SmallBubleTableViewCell
 //                cell.configureCell(showsReactionButton: showingReactionButton)
+                cell.configureShadow(removeShadow: tutorialIsOver)
                 return cell
             case .big:
             let cell = tableView.dequeueReusableCell(withIdentifier: "bigBubbleCell", for: indexPath) as! BigBubleTableViewCell
                 responseIndex = indexPath
+                cell.configureShadow(removeShadow: tutorialIsOver)
                 return cell
             case .sticker:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "stickerBubbleCell", for: indexPath) as! StickerTableViewCell
                 print("STICKER")
                 responseIndex = indexPath
-                return tableView.dequeueReusableCell(withIdentifier: "stickerBubbleCell", for: indexPath) as! StickerTableViewCell
+                cell.configureShadow(removeShadow: tutorialIsOver)
+                return cell
                 //MARK: --SELF
             case .selfSmall: let cell = tableView.dequeueReusableCell(withIdentifier: "selfLittleCell", for: indexPath) as! SelfSmallTableViewCell
                 print("selfBubble")
                 cell.configureCell("", isCustom: false)
                 let currentIndex = indexPath.row
+                cell.configureShadow(removeShadow: tutorialIsOver)
                 if responseIndex?.row == currentIndex - 1 {
                     cell.longBubble.image = UIImage(named: "selfBubbleReversed")
                 }
@@ -158,6 +172,7 @@ extension PaidAnswerChatViewController: UITableViewDelegate, UITableViewDataSour
                 cell.longBubble.image = UIImage(named: "selfLong")
                 cell.longLabel.text = messageTextView.text
                 let currentIndex = indexPath.row
+                cell.configureShadow(removeShadow: tutorialIsOver)
                 if responseIndex?.row == currentIndex - 1 {
                     cell.longBubble.image = UIImage(named: "selfLongBubbleReversed")
                 }
@@ -165,6 +180,7 @@ extension PaidAnswerChatViewController: UITableViewDelegate, UITableViewDataSour
             case .selfBig: let cell = tableView.dequeueReusableCell(withIdentifier: "selfBigBubbleCell", for: indexPath) as! SelfBigBubleTableViewCell
                 cell.bubbleTextView.text = messageTextView.text
                 let currentIndex = indexPath.row
+                cell.configureShadow(removeShadow: tutorialIsOver)
                 if responseIndex?.row == currentIndex - 1 {
                     cell.bubbleImageView.image = UIImage(named: "RectanglePinkReversed")
                 }
@@ -172,6 +188,7 @@ extension PaidAnswerChatViewController: UITableViewDelegate, UITableViewDataSour
             case .selfSticker(let image):
                 let cell = tableView.dequeueReusableCell(withIdentifier: "selfStickerCell", for: indexPath) as! SelfStickerTableViewCell
                 cell.setImage(image)
+                cell.configureShadow(removeShadow: tutorialIsOver)
                 return cell
             //MARK: --Paid
             case .selfPaidSmall:
@@ -179,32 +196,38 @@ extension PaidAnswerChatViewController: UITableViewDelegate, UITableViewDataSour
                 print("SelfPaidSmall")
                 cell.shortBubble.image = UIImage(named: "selfGreenBubble")
                 cell.configureCell("", isCustom: false)
+                cell.configureShadow(removeShadow: tutorialIsOver)
                 return cell
             case .selfPaidSmallCustom:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "selfLittleCell", for: indexPath) as! SelfSmallTableViewCell
-                    print("SelfSmallCustom")
-                    cell.configureCell(paidMessageTextView.text, isCustom: true)
-                    cell.longBubble.image = UIImage(named: "selfGreenBubbleLong")
-                    let currentIndex = indexPath.row
-                    if responseIndex?.row == currentIndex - 1 {
-                        cell.longBubble.image = UIImage(named: "selfGreenBubbleLongReversed")
-                    }
-                    return cell
+                print("SelfSmallCustom")
+                cell.configureCell(paidMessageTextView.text, isCustom: true)
+                cell.longBubble.image = UIImage(named: "selfGreenBubbleLong")
+                let currentIndex = indexPath.row
+                cell.configureShadow(removeShadow: tutorialIsOver)
+                if responseIndex?.row == currentIndex - 1 {
+                    cell.longBubble.image = UIImage(named: "selfGreenBubbleLongReversed")
+                }
+                return cell
             case .smallReaction:
                 responseIndex = indexPath
                 let cell = tableView.dequeueReusableCell(withIdentifier: "smallBubbleWithReactionCell", for: indexPath) as! SmallWithReactionCell
                 cell.delegate = self
-//                cell.configureCell(showsReactionButton: showingReactionButton)
+                if !tutorialIsOver {
+                    backgroundShadowView.backgroundColor = .black
+                    backgroundShadowView.layer.opacity = 0.6
+                }
+                cell.removeShadowClosure = {
+                    UIView.animate(withDuration: 0.2) {
+                        cell.backgroundShadowView.layer.opacity = 0
+                        self.insetShadowView.layer.opacity = 0
+                        self.fingerImageView.layer.opacity = 0
+                        self.chatTableView.isScrollEnabled = true
+                    }
+                    self.tutorialIsOver = true
+                    tableView.reloadData()
+                }
                 return cell
-//            case .selfPaidBig:
-//                let cell = tableView.dequeueReusableCell(withIdentifier: "selfBigBubbleCell", for: indexPath) as! SelfBigBubleTableViewCell
-//                    cell.bubbleTextView.text = messageTextView.text
-//                cell.bubbleImageView.image = UIImage(named: "selfGreenBubbleBig")
-//                let currentIndex = indexPath.row
-//                if responseIndex?.row == currentIndex - 1 {
-//                    cell.bubbleImageView.image = UIImage(named: "selfGreenBubbleBigReversed")
-//                }
-//                return cell
             }
         }
         return checkCell()
@@ -215,6 +238,15 @@ extension PaidAnswerChatViewController: ReactionDelegate {
     func showPopup() {
         UIView.animate(withDuration: 0.2) {
             self.likePopupView.layer.opacity = 1
+            
+        }
+    }
+    
+    func hideBackgroundShadow() {
+        UIView.animate(withDuration: 0.2) {
+            self.backgroundShadowView.layer.opacity = 0
+            self.tableViewBackgroundShadowView?.layer.opacity = 0
+            self.insetShadowView.layer.opacity = 0
         }
     }
 }

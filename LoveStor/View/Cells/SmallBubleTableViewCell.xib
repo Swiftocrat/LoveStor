@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,9 +37,17 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sng-p3-06u">
+                        <rect key="frame" x="0.0" y="0.0" width="228" height="63"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
+                    <constraint firstItem="Sng-p3-06u" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="A5N-A8-UKf"/>
+                    <constraint firstAttribute="bottom" secondItem="Sng-p3-06u" secondAttribute="bottom" id="AjW-tG-JJJ"/>
+                    <constraint firstAttribute="trailing" secondItem="Sng-p3-06u" secondAttribute="trailing" id="Dtm-JW-ddw"/>
+                    <constraint firstItem="Sng-p3-06u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="In6-gL-G0V"/>
                     <constraint firstItem="9Pd-ux-XVJ" firstAttribute="centerX" secondItem="Ns5-3g-yM8" secondAttribute="centerX" id="P7u-rC-Sbr"/>
                     <constraint firstItem="Ns5-3g-yM8" firstAttribute="leading" secondItem="gLu-e7-yw9" secondAttribute="trailing" constant="6" id="Qc8-hF-Gre"/>
                     <constraint firstAttribute="bottom" secondItem="Ns5-3g-yM8" secondAttribute="bottom" id="W0N-UU-XU2"/>
@@ -51,6 +59,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="backgroundShadowView" destination="Sng-p3-06u" id="cer-3l-oPT"/>
+            </connections>
             <point key="canvasLocation" x="-115.94202898550725" y="130.24553571428572"/>
         </tableViewCell>
     </objects>

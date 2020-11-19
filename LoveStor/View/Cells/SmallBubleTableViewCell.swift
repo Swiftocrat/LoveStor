@@ -9,9 +9,13 @@ import UIKit
 
 class SmallBubleTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var backgroundShadowView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        backgroundShadowView.backgroundColor = .black
+        backgroundShadowView.layer.opacity = 0.6
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,6 +39,11 @@ class SmallBubleTableViewCell: UITableViewCell {
 //        }
 //    }
     
-    @IBAction func reactionButtonTapped(_ sender: Any) {
+    func configureShadow(removeShadow: Bool) {
+        if removeShadow {
+            UIView.animate(withDuration: 0.2) {
+                self.backgroundShadowView.layer.opacity = 0
+            }
+        }
     }
 }

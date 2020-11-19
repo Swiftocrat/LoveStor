@@ -12,12 +12,16 @@ class SmallWithReactionCell: UITableViewCell {
 
     @IBOutlet weak var reactionButton: UIButton!
     @IBOutlet weak var rectionButtonHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var backgroundShadowView: UIView!
     
     weak var delegate: ReactionDelegate?
+    var removeShadowClosure: () -> Void = {}
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        backgroundShadowView.backgroundColor = .black
+        backgroundShadowView.layer.opacity = 0.6
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -31,16 +35,12 @@ class SmallWithReactionCell: UITableViewCell {
         super.layoutSubviews()
     
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left:  0, bottom: 0, right: 0))
-       contentView.frame = contentView.frame.offsetBy(dx: 0, dy: 0)
+        contentView.frame = contentView.frame.offsetBy(dx: 0, dy: 0)
     }
     
-//    func configureCell(showsReactionButton: Bool) {
-//        if !showsReactionButton {
-//            reactionButton.isHidden = true
-//            rectionButtonHeightConstraint.constant = 0
-//        }
-//    }
     @IBAction func reactionButtonTapped(_ sender: Any) {
+        removeShadowClosure()
+//        delegate?.hideBackgroundShadow()
         let aView = UIView(frame: CGRect(x: 0, y: 0, width: 48, height: 106))
         let happySmileButton = UIButton(frame: CGRect(x: 0, y: 0, width: 36, height: 36))
         let positiveSmileButton = UIButton(frame: CGRect(x: 0, y: 0, width: 36, height: 36))

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -33,16 +33,27 @@
                             <constraint firstAttribute="height" constant="33" id="ka2-09-dj1"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skX-3j-ftM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="106"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="skX-3j-ftM" secondAttribute="trailing" id="G6e-Km-LEM"/>
                     <constraint firstItem="ceL-eb-8Of" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="GgB-S1-mn5"/>
+                    <constraint firstItem="skX-3j-ftM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Wvc-Pw-AYP"/>
                     <constraint firstItem="h2q-yz-Bfc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Yob-Qu-eGs"/>
                     <constraint firstItem="ceL-eb-8Of" firstAttribute="leading" secondItem="h2q-yz-Bfc" secondAttribute="trailing" constant="6" id="e7e-LH-c7Q"/>
+                    <constraint firstAttribute="bottom" secondItem="skX-3j-ftM" secondAttribute="bottom" id="eia-lg-0AL"/>
+                    <constraint firstItem="skX-3j-ftM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fcY-aB-BPd"/>
                     <constraint firstItem="h2q-yz-Bfc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="40" id="ybX-TF-j4m"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="backgroundShadowView" destination="skX-3j-ftM" id="iO0-wc-6HD"/>
+            </connections>
             <point key="canvasLocation" x="-159.42028985507247" y="125.22321428571428"/>
         </tableViewCell>
     </objects>

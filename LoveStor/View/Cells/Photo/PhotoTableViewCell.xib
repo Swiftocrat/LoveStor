@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -79,22 +79,31 @@
                             <constraint firstAttribute="width" constant="40" id="yH0-dt-ACj"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ssa-rn-UGd">
+                        <rect key="frame" x="0.0" y="0.0" width="399" height="352"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Y5O-jN-Qjf" firstAttribute="leading" secondItem="d4l-li-oFH" secondAttribute="leading" constant="10" id="2GK-Sf-9Tp"/>
                     <constraint firstItem="6nh-Uu-uXv" firstAttribute="centerX" secondItem="ZcZ-0p-C8A" secondAttribute="centerX" id="4Fq-o0-Drr"/>
+                    <constraint firstAttribute="bottom" secondItem="Ssa-rn-UGd" secondAttribute="bottom" id="E6L-yB-lJ3"/>
                     <constraint firstItem="ZcZ-0p-C8A" firstAttribute="leading" secondItem="Y5O-jN-Qjf" secondAttribute="trailing" constant="10" id="EZt-Tl-6TY"/>
+                    <constraint firstItem="Ssa-rn-UGd" firstAttribute="leading" secondItem="d4l-li-oFH" secondAttribute="leading" id="Ejk-L6-8Eh"/>
                     <constraint firstItem="9KP-UC-DhX" firstAttribute="top" secondItem="6nh-Uu-uXv" secondAttribute="bottom" constant="16" id="WZq-eF-qGh"/>
                     <constraint firstAttribute="bottom" secondItem="ZcZ-0p-C8A" secondAttribute="bottom" id="deO-o8-0F6"/>
+                    <constraint firstItem="Ssa-rn-UGd" firstAttribute="top" secondItem="d4l-li-oFH" secondAttribute="top" id="ebC-BS-Q9C"/>
                     <constraint firstItem="9KP-UC-DhX" firstAttribute="centerX" secondItem="ZcZ-0p-C8A" secondAttribute="centerX" id="g9k-5x-PFM"/>
                     <constraint firstItem="Y5O-jN-Qjf" firstAttribute="top" secondItem="d4l-li-oFH" secondAttribute="top" constant="5" id="gPR-hp-t2q"/>
                     <constraint firstItem="ZcZ-0p-C8A" firstAttribute="top" secondItem="Y5O-jN-Qjf" secondAttribute="top" id="lW1-Ku-QFi"/>
+                    <constraint firstAttribute="trailing" secondItem="Ssa-rn-UGd" secondAttribute="trailing" id="nIw-NS-cp2"/>
                     <constraint firstItem="6nh-Uu-uXv" firstAttribute="top" secondItem="d4l-li-oFH" secondAttribute="topMargin" constant="111" id="uDN-FJ-bX1"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="bPq-vb-x4h"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="backgroundShadowView" destination="Ssa-rn-UGd" id="XNR-qQ-y41"/>
                 <outlet property="photoImageView" destination="ZcZ-0p-C8A" id="TXR-nx-NVB"/>
                 <outlet property="tapToUnblurLabel" destination="6nh-Uu-uXv" id="iRv-D3-oqC"/>
                 <outlet property="unblurView" destination="9KP-UC-DhX" id="XcE-QE-mbB"/>

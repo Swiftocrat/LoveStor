@@ -9,10 +9,15 @@ import UIKit
 
 class SelfStickerTableViewCell: UITableViewCell {
 
-  @IBOutlet weak var stikcerImageView: UIImageView!
-  override func awakeFromNib() {
+    @IBOutlet weak var stikcerImageView: UIImageView!
+    @IBOutlet weak var backgroundShadowView: UIView!
+    
+    
+    override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        backgroundShadowView.backgroundColor = .black
+        backgroundShadowView.layer.opacity = 0.6
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -21,7 +26,15 @@ class SelfStickerTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-  func setImage(_ sticker:UIImage) {
-    stikcerImageView.image = sticker
-  }
+    func setImage(_ sticker:UIImage) {
+        stikcerImageView.image = sticker
+    }
+    
+    func configureShadow(removeShadow: Bool) {
+        if removeShadow {
+            UIView.animate(withDuration: 0.2) {
+                self.backgroundShadowView.layer.opacity = 0
+            }
+        }
+    }
 }
