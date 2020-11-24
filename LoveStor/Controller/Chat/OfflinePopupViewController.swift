@@ -106,28 +106,39 @@ extension OfflinePopupViewController: UITableViewDelegate, UITableViewDataSource
         func checkCell() -> UITableViewCell {
             switch messages[indexPath.row] {
             case .small:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "littleBubbleCell", for: indexPath) as! SmallBubleTableViewCell
                 responseIndex = indexPath
-                return tableView.dequeueReusableCell(withIdentifier: "littleBubbleCell", for: indexPath) as! SmallBubleTableViewCell
+                cell.configureShadow(removeShadow: true)
+                return cell
             case .big:
             let cell = tableView.dequeueReusableCell(withIdentifier: "bigBubbleCell", for: indexPath) as! BigBubleTableViewCell
+                cell.configureShadow(removeShadow: true)
                 responseIndex = indexPath
                 return cell
             case .sticker:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "stickerBubbleCell", for: indexPath) as! StickerTableViewCell
+                cell.configureShadow(removeShadow: true)
                 print("STICKER")
                 responseIndex = indexPath
-                return tableView.dequeueReusableCell(withIdentifier: "stickerBubbleCell", for: indexPath) as! StickerTableViewCell
+                return cell
                 
                 //MARK: --SELF
-            case .selfSmall: let cell = tableView.dequeueReusableCell(withIdentifier: "selfLittleCell", for: indexPath) as! SelfSmallTableViewCell
+            case .selfSmall:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "selfLittleCell", for: indexPath) as! SelfSmallTableViewCell
                 print("SelfSmall")
                 cell.configureCell("", isCustom: false)
+                cell.configureShadow(removeShadow: true)
                 return cell
-            case .selfSmallCustom: let cell = tableView.dequeueReusableCell(withIdentifier: "selfLittleCell", for: indexPath) as! SelfSmallTableViewCell
+            case .selfSmallCustom:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "selfLittleCell", for: indexPath) as! SelfSmallTableViewCell
                 print("SelfSmallCustom")
                 cell.configureCell(messageTextView.text, isCustom: true)
+                cell.configureShadow(removeShadow: true)
                 return cell
-            case .selfBig: let cell = tableView.dequeueReusableCell(withIdentifier: "selfBigBubbleCell", for: indexPath) as! SelfBigBubleTableViewCell
+            case .selfBig:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "selfBigBubbleCell", for: indexPath) as! SelfBigBubleTableViewCell
                 cell.bubbleTextView.text = messageTextView.text
+                cell.configureShadow(removeShadow: true)
                 let currentIndex = indexPath.row
                 if responseIndex?.row == currentIndex - 1 {
                     cell.bubbleImageView.image = UIImage(named: "RectanglePinkReversed")
@@ -135,6 +146,7 @@ extension OfflinePopupViewController: UITableViewDelegate, UITableViewDataSource
                 return cell
             case .selfSticker(let image):
                 let cell = tableView.dequeueReusableCell(withIdentifier: "selfStickerCell", for: indexPath) as! SelfStickerTableViewCell
+                cell.configureShadow(removeShadow: true)
                 cell.setImage(image)
                 return cell
             }

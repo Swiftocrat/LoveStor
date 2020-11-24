@@ -10,11 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="photoCell" rowHeight="352" id="ogj-F8-AGZ" customClass="PhotoTableViewCell" customModule="LoveStor" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="399" height="352"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="photoCell" rowHeight="318" id="ogj-F8-AGZ" customClass="PhotoTableViewCell" customModule="LoveStor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="399" height="318"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="ogj-F8-AGZ" id="d4l-li-oFH">
-                <rect key="frame" x="0.0" y="0.0" width="399" height="352"/>
+                <rect key="frame" x="0.0" y="0.0" width="399" height="318"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="womanMessageImage" translatesAutoresizingMaskIntoConstraints="NO" id="ZcZ-0p-C8A" customClass="BlurImageView" customModule="LoveStor" customModuleProvider="target">
@@ -79,17 +79,17 @@
                             <constraint firstAttribute="width" constant="40" id="yH0-dt-ACj"/>
                         </constraints>
                     </imageView>
-                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ssa-rn-UGd">
-                        <rect key="frame" x="0.0" y="0.0" width="399" height="352"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ssa-rn-UGd">
+                        <rect key="frame" x="0.0" y="0.0" width="399" height="305"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Y5O-jN-Qjf" firstAttribute="leading" secondItem="d4l-li-oFH" secondAttribute="leading" constant="10" id="2GK-Sf-9Tp"/>
                     <constraint firstItem="6nh-Uu-uXv" firstAttribute="centerX" secondItem="ZcZ-0p-C8A" secondAttribute="centerX" id="4Fq-o0-Drr"/>
-                    <constraint firstAttribute="bottom" secondItem="Ssa-rn-UGd" secondAttribute="bottom" id="E6L-yB-lJ3"/>
                     <constraint firstItem="ZcZ-0p-C8A" firstAttribute="leading" secondItem="Y5O-jN-Qjf" secondAttribute="trailing" constant="10" id="EZt-Tl-6TY"/>
                     <constraint firstItem="Ssa-rn-UGd" firstAttribute="leading" secondItem="d4l-li-oFH" secondAttribute="leading" id="Ejk-L6-8Eh"/>
+                    <constraint firstItem="Ssa-rn-UGd" firstAttribute="bottom" secondItem="ZcZ-0p-C8A" secondAttribute="bottom" id="GM3-cd-Dxg"/>
                     <constraint firstItem="9KP-UC-DhX" firstAttribute="top" secondItem="6nh-Uu-uXv" secondAttribute="bottom" constant="16" id="WZq-eF-qGh"/>
                     <constraint firstAttribute="bottom" secondItem="ZcZ-0p-C8A" secondAttribute="bottom" id="deO-o8-0F6"/>
                     <constraint firstItem="Ssa-rn-UGd" firstAttribute="top" secondItem="d4l-li-oFH" secondAttribute="top" id="ebC-BS-Q9C"/>
@@ -108,7 +108,7 @@
                 <outlet property="tapToUnblurLabel" destination="6nh-Uu-uXv" id="iRv-D3-oqC"/>
                 <outlet property="unblurView" destination="9KP-UC-DhX" id="XcE-QE-mbB"/>
             </connections>
-            <point key="canvasLocation" x="-209.42028985507247" y="206.91964285714286"/>
+            <point key="canvasLocation" x="-209.42028985507247" y="195.53571428571428"/>
         </tableViewCell>
     </objects>
     <resources>

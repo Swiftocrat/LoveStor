@@ -80,27 +80,38 @@ extension BasicChatViewController: UITableViewDelegate, UITableViewDataSource {
         func checkCell() -> UITableViewCell {
             switch messages[indexPath.row] {
             case .small:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "littleBubbleCell", for: indexPath) as! SmallBubleTableViewCell
+                cell.configureShadow(removeShadow: true)
                 responseIndex = indexPath
-                return tableView.dequeueReusableCell(withIdentifier: "littleBubbleCell", for: indexPath) as! SmallBubleTableViewCell
+                return cell
             case .big:
             let cell = tableView.dequeueReusableCell(withIdentifier: "bigBubbleCell", for: indexPath) as! BigBubleTableViewCell
+                cell.configureShadow(removeShadow: true)
                 responseIndex = indexPath
                 return cell
             case .sticker:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "stickerBubbleCell", for: indexPath) as! StickerTableViewCell
                 print("STICKER")
+                cell.configureShadow(removeShadow: true)
                 responseIndex = indexPath
-                return tableView.dequeueReusableCell(withIdentifier: "stickerBubbleCell", for: indexPath) as! StickerTableViewCell
+                return cell
                 
                 //MARK: --SELF
-            case .selfSmall: let cell = tableView.dequeueReusableCell(withIdentifier: "selfLittleCell", for: indexPath) as! SelfSmallTableViewCell
+            case .selfSmall:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "selfLittleCell", for: indexPath) as! SelfSmallTableViewCell
                 print("SelfSmall")
                 cell.configureCell("", isCustom: false)
+                cell.configureShadow(removeShadow: true)
                 return cell
-            case .selfSmallCustom: let cell = tableView.dequeueReusableCell(withIdentifier: "selfLittleCell", for: indexPath) as! SelfSmallTableViewCell
+            case .selfSmallCustom:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "selfLittleCell", for: indexPath) as! SelfSmallTableViewCell
                 print("SelfSmallCustom")
                 cell.configureCell(messageTextView.text, isCustom: true)
+                cell.configureShadow(removeShadow: true)
                 return cell
-            case .selfBig: let cell = tableView.dequeueReusableCell(withIdentifier: "selfBigBubbleCell", for: indexPath) as! SelfBigBubleTableViewCell
+            case .selfBig:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "selfBigBubbleCell", for: indexPath) as! SelfBigBubleTableViewCell
+                cell.configureShadow(removeShadow: true)
                 cell.bubbleTextView.text = messageTextView.text
                 let currentIndex = indexPath.row
                 if responseIndex?.row == currentIndex - 1 {
@@ -109,6 +120,7 @@ extension BasicChatViewController: UITableViewDelegate, UITableViewDataSource {
                 return cell
             case .selfSticker(let image):
                 let cell = tableView.dequeueReusableCell(withIdentifier: "selfStickerCell", for: indexPath) as! SelfStickerTableViewCell
+                cell.configureShadow(removeShadow: true)
                 cell.setImage(image)
                 return cell
             }

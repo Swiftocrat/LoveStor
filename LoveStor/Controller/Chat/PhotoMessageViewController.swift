@@ -115,20 +115,25 @@ extension PhotoMessageViewController: UITableViewDelegate, UITableViewDataSource
             case .small:
                 responseIndex = indexPath
                 let cell = tableView.dequeueReusableCell(withIdentifier: "littleBubbleCell", for: indexPath) as! SmallBubleTableViewCell
+                cell.configureShadow(removeShadow: true)
 //                cell.configureCell(showsReactionButton: showingReactionButton)
                 return cell
             case .big:
             let cell = tableView.dequeueReusableCell(withIdentifier: "bigBubbleCell", for: indexPath) as! BigBubleTableViewCell
+                cell.configureShadow(removeShadow: true)
                 responseIndex = indexPath
                 return cell
             case .sticker:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "stickerBubbleCell", for: indexPath) as! StickerTableViewCell
+                cell.configureShadow(removeShadow: true)
                 print("STICKER")
                 responseIndex = indexPath
-                return tableView.dequeueReusableCell(withIdentifier: "stickerBubbleCell", for: indexPath) as! StickerTableViewCell
+                return cell
                 //MARK: --SELF
             case .selfSmall: let cell = tableView.dequeueReusableCell(withIdentifier: "selfLittleCell", for: indexPath) as! SelfSmallTableViewCell
                 print("selfBubble")
                 cell.configureCell("", isCustom: false)
+                cell.configureShadow(removeShadow: true)
                 let currentIndex = indexPath.row
                 if responseIndex?.row == currentIndex - 1 {
                     cell.longBubble.image = UIImage(named: "selfBubbleReversed")
@@ -137,6 +142,7 @@ extension PhotoMessageViewController: UITableViewDelegate, UITableViewDataSource
             case .selfSmallCustom: let cell = tableView.dequeueReusableCell(withIdentifier: "selfLittleCell", for: indexPath) as! SelfSmallTableViewCell
                 print("SelfSmallCustom")
                 cell.configureCell(messageTextView.text, isCustom: true)
+                cell.configureShadow(removeShadow: true)
                 cell.longBubble.image = UIImage(named: "selfLong")
                 if pressedButton == .first {
                     cell.longLabel.text = messageTextView.text
@@ -150,6 +156,7 @@ extension PhotoMessageViewController: UITableViewDelegate, UITableViewDataSource
                 return cell
             case .selfBig: let cell = tableView.dequeueReusableCell(withIdentifier: "selfBigBubbleCell", for: indexPath) as! SelfBigBubleTableViewCell
                 cell.bubbleTextView.text = messageTextView.text
+                cell.configureShadow(removeShadow: true)
                 let currentIndex = indexPath.row
                 if responseIndex?.row == currentIndex - 1 {
                     cell.bubbleImageView.image = UIImage(named: "RectanglePinkReversed")
@@ -157,10 +164,12 @@ extension PhotoMessageViewController: UITableViewDelegate, UITableViewDataSource
                 return cell
             case .selfSticker(let image):
                 let cell = tableView.dequeueReusableCell(withIdentifier: "selfStickerCell", for: indexPath) as! SelfStickerTableViewCell
+                cell.configureShadow(removeShadow: true)
                 cell.setImage(image)
                 return cell
             case .photo:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as! PhotoTableViewCell
+                cell.configureShadow(removeShadow: true)
                 responseIndex = indexPath
                 return cell
             }
