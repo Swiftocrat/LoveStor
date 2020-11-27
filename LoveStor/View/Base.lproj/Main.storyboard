@@ -49,6 +49,16 @@
             </objects>
             <point key="canvasLocation" x="1410" y="117"/>
         </scene>
+        <!--Registration-->
+        <scene sceneID="Riv-y3-wJS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Registration" id="1Gv-IW-jF1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="LJI-F9-ddh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dRj-xK-Kho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1887" y="-263"/>
+        </scene>
         <!--Selection View Controller-->
         <scene sceneID="CB0-lx-aZM">
             <objects>
@@ -107,14 +117,26 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="of9-L6-ZFv">
+                                <rect key="frame" x="157" y="244" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="jHY-q2-eqX"/>
+                                </constraints>
+                                <state key="normal" title="Registration"/>
+                                <connections>
+                                    <segue destination="1Gv-IW-jF1" kind="push" id="yVy-p6-GGY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vTM-3K-gIV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="of9-L6-ZFv" firstAttribute="centerX" secondItem="jkI-ur-RXP" secondAttribute="centerX" id="4dh-JY-CzG"/>
                             <constraint firstItem="a1t-cK-GeK" firstAttribute="centerX" secondItem="jkI-ur-RXP" secondAttribute="centerX" id="5aI-5P-FmF"/>
                             <constraint firstItem="a1t-cK-GeK" firstAttribute="top" secondItem="vTM-3K-gIV" secondAttribute="top" constant="30" id="HeF-xC-AWI"/>
                             <constraint firstItem="np9-nj-kdu" firstAttribute="centerX" secondItem="jkI-ur-RXP" secondAttribute="centerX" id="Sag-RO-43j"/>
                             <constraint firstItem="LsI-0w-Nfz" firstAttribute="centerX" secondItem="jkI-ur-RXP" secondAttribute="centerX" id="VqS-pk-Jot"/>
+                            <constraint firstItem="of9-L6-ZFv" firstAttribute="top" secondItem="LsI-0w-Nfz" secondAttribute="bottom" constant="20" id="foP-F9-dak"/>
                             <constraint firstItem="np9-nj-kdu" firstAttribute="top" secondItem="a1t-cK-GeK" secondAttribute="bottom" constant="30" id="jiB-Kx-sem"/>
                             <constraint firstItem="LsI-0w-Nfz" firstAttribute="top" secondItem="np9-nj-kdu" secondAttribute="bottom" constant="30" id="sla-gY-gbb"/>
                         </constraints>
