@@ -44,6 +44,8 @@
 		432B13FC25712D66004CF2BE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432B13FB25712D66004CF2BE /* ProfileViewController.swift */; };
 		432DB738255D37F200507126 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432DB736255D37F200507126 /* PhotoTableViewCell.swift */; };
 		432DB739255D37F200507126 /* PhotoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 432DB737255D37F200507126 /* PhotoTableViewCell.xib */; };
+		4345743D25718CFC0000C714 /* ProfileIconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4345743B25718CFC0000C714 /* ProfileIconCollectionViewCell.swift */; };
+		4345743E25718CFC0000C714 /* ProfileIconCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4345743C25718CFC0000C714 /* ProfileIconCollectionViewCell.xib */; };
 		43705AB6255C73E90025E3EA /* PhotoMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43705AB5255C73E90025E3EA /* PhotoMessageViewController.swift */; };
 		43749567255BCC6B00B267A6 /* SmallWithReactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43749565255BCC6B00B267A6 /* SmallWithReactionCell.swift */; };
 		43749568255BCC6B00B267A6 /* SmallWithReactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43749566255BCC6B00B267A6 /* SmallWithReactionCell.xib */; };
@@ -112,6 +114,8 @@
 		432B13FB25712D66004CF2BE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		432DB736255D37F200507126 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
 		432DB737255D37F200507126 /* PhotoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoTableViewCell.xib; sourceTree = "<group>"; };
+		4345743B25718CFC0000C714 /* ProfileIconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileIconCollectionViewCell.swift; sourceTree = "<group>"; };
+		4345743C25718CFC0000C714 /* ProfileIconCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileIconCollectionViewCell.xib; sourceTree = "<group>"; };
 		43705AB5255C73E90025E3EA /* PhotoMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMessageViewController.swift; sourceTree = "<group>"; };
 		43749565255BCC6B00B267A6 /* SmallWithReactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWithReactionCell.swift; sourceTree = "<group>"; };
 		43749566255BCC6B00B267A6 /* SmallWithReactionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmallWithReactionCell.xib; sourceTree = "<group>"; };
@@ -283,6 +287,15 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		4345743A25718CD20000C714 /* ProfileIconCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				4345743B25718CFC0000C714 /* ProfileIconCollectionViewCell.swift */,
+				4345743C25718CFC0000C714 /* ProfileIconCollectionViewCell.xib */,
+			);
+			path = ProfileIconCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		43705AAE255C727D0025E3EA /* Photo */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,6 +341,7 @@
 				438BC8E325704AA5000D1519 /* AvatarSelectionViewController.swift */,
 				438BC8E025704940000D1519 /* HoroscopeSignViewController.swift */,
 				432B13FB25712D66004CF2BE /* ProfileViewController.swift */,
+				4345743A25718CD20000C714 /* ProfileIconCollectionViewCell */,
 				438BC8E725704D17000D1519 /* HoroscopeSignTableViewCell */,
 			);
 			path = Registration;
@@ -461,6 +475,7 @@
 				2832976625366D4500F59EF0 /* StickerCollectionViewCell.xib in Resources */,
 				2832976C2536F97E00F59EF0 /* SmallBubleTableViewCell.xib in Resources */,
 				283297AE25371DCA00F59EF0 /* SelfStickerTableViewCell.xib in Resources */,
+				4345743E25718CFC0000C714 /* ProfileIconCollectionViewCell.xib in Resources */,
 				43845623256E811F00C70F38 /* Registration.storyboard in Resources */,
 				28BC8FC0253DE41C0055E21D /* Messenger-Pigeons in Resources */,
 				4320C7FE255C66B4004F6EE6 /* SFCompactText-Regular.ttf in Resources */,
@@ -552,6 +567,7 @@
 				28740B692531222A0090DCC1 /* KolodaViewController.swift in Sources */,
 				286AAC712548D2EC00E7FD21 /* LoveStorView.swift in Sources */,
 				43749567255BCC6B00B267A6 /* SmallWithReactionCell.swift in Sources */,
+				4345743D25718CFC0000C714 /* ProfileIconCollectionViewCell.swift in Sources */,
 				283297572535992B00F59EF0 /* MockMessage.swift in Sources */,
 				28740B662530C26F0090DCC1 /* GradientView.swift in Sources */,
 				28740B4C2530B4E40090DCC1 /* SceneDelegate.swift in Sources */,

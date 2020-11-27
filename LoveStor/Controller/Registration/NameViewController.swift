@@ -13,12 +13,15 @@ class NameViewController: UIViewController {
     @IBOutlet weak var nameTextFieldBackgroundImageView: UIImageView!
     @IBOutlet weak var confirmButton: UIButton!
     
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func confirmButtonTapped(_ sender: Any) {
+        guard let text = nameTextField.text else { return }
+        defaults.setValue(text, forKey: "enteredName")
     }
 }

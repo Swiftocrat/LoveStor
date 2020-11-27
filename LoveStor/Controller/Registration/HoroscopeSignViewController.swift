@@ -21,6 +21,9 @@ class HoroscopeSignViewController: UIViewController {
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Registration", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "ProfileViewController") as ProfileViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -39,14 +42,5 @@ extension HoroscopeSignViewController: UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.dequeueReusableCell(withIdentifier: "horoscopeSignCell", for: indexPath) as! HoroscopeSignTableViewCell
-        
-//        cell.contentView.layer.opacity = 0.1
-//        cell.showSelection()
     }
-    
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-
-            let cellToDeSelect = tableView.dequeueReusableCell(withIdentifier: "horoscopeSignCell", for: indexPath) as! HoroscopeSignTableViewCell
-            cellToDeSelect.contentView.backgroundColor = .clear
-        }
 }
