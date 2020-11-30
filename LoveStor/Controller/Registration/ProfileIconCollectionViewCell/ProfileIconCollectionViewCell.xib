@@ -33,10 +33,14 @@
                 </subviews>
             </view>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="08T-Wx-3lS" secondAttribute="trailing" id="0hb-Yj-LMU"/>
+                <constraint firstAttribute="bottom" secondItem="sB5-uX-aHC" secondAttribute="bottom" id="EtM-gH-pun"/>
                 <constraint firstItem="08T-Wx-3lS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ooj-iB-vAO"/>
                 <constraint firstItem="sB5-uX-aHC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="Osa-K5-ueC"/>
                 <constraint firstItem="08T-Wx-3lS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fg1-8k-oIZ"/>
+                <constraint firstAttribute="trailing" secondItem="sB5-uX-aHC" secondAttribute="trailing" constant="1" id="hlH-Ry-1Hv"/>
                 <constraint firstItem="sB5-uX-aHC" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="riY-qb-MZ2"/>
+                <constraint firstAttribute="bottom" secondItem="08T-Wx-3lS" secondAttribute="bottom" id="zkV-Py-dqD"/>
             </constraints>
             <size key="customSize" width="110" height="110"/>
             <connections>
