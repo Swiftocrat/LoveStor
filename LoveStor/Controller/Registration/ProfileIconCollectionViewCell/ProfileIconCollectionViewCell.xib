@@ -20,14 +20,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="110" id="46y-HB-bqu"/>
-                            <constraint firstAttribute="height" constant="110" id="vDW-Fj-fSN"/>
+                            <constraint firstAttribute="width" secondItem="08T-Wx-3lS" secondAttribute="height" multiplier="1:1" id="C89-kp-D5a"/>
                         </constraints>
                     </imageView>
                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarSelectionIcon" translatesAutoresizingMaskIntoConstraints="NO" id="sB5-uX-aHC">
                         <rect key="frame" x="1" y="2" width="108" height="108"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="108" id="0Uk-xU-Kih"/>
-                            <constraint firstAttribute="height" constant="108" id="kiI-r9-7Mw"/>
+                            <constraint firstAttribute="width" secondItem="sB5-uX-aHC" secondAttribute="height" multiplier="1:1" id="tjg-hl-vk8"/>
                         </constraints>
                     </imageView>
                 </subviews>

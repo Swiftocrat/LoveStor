@@ -37,23 +37,8 @@ class AvatarSelectionViewController: UIViewController {
             layout.minimumLineSpacing = 20
             layout.itemSize = CGSize(width: 110, height: 110)
         }
-        
-//        if UIScreen.main.bounds.height > 667.0 {
-//
-//        }
-        collectionView.collectionViewLayout = layout
-//        collectionView.collectionViewLayout = setupLayout()
+        collectionView.collectionViewLayout = layout\
     }
-    
-//    func setupLayout() -> UICollectionViewCompositionalLayout {
-//        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.3), heightDimension: .fractionalWidth(0.3))
-//        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-//        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(80.0))
-//        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-//        let section = NSCollectionLayoutSection(group: group)
-//
-//        return UICollectionViewCompositionalLayout(section: section)
-//    }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         guard let selectedIndex = selectedIndex else { return }
