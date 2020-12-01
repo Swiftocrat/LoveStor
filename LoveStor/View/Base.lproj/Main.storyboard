@@ -155,7 +155,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="6k4-dO-W2R">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="6k4-dO-W2R">
                                 <rect key="frame" x="-5" y="-5" width="424" height="852"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="vp6-di-ZZj">
@@ -220,9 +220,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kolodabackground" translatesAutoresizingMaskIntoConstraints="NO" id="Xo1-YS-54J">
-                                <rect key="frame" x="-96" y="0.0" width="607" height="452"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kolodabackground" translatesAutoresizingMaskIntoConstraints="NO" id="Xo1-YS-54J">
+                                <rect key="frame" x="0.0" y="-3" width="414" height="444"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VPb-Qn-OHL">
                                 <rect key="frame" x="106" y="731" width="80" height="75.333333333333371"/>
@@ -337,18 +336,23 @@
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat" translatesAutoresizingMaskIntoConstraints="NO" id="Zxp-i7-MI1">
-                                        <rect key="frame" x="24" y="0.0" width="277" height="32"/>
+                                        <rect key="frame" x="24" y="0.0" width="275" height="32"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="Pba-by-is7" appends="YES" id="gqt-Be-Ke7"/>
                                         </connections>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="ydH-JN-tji">
-                                        <rect key="frame" x="301" y="0.0" width="21" height="32"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdX-h4-UTT">
+                                        <rect key="frame" x="299" y="0.0" width="23" height="32"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="21" id="aU2-Nm-OG0"/>
+                                            <constraint firstAttribute="width" constant="23" id="06J-E5-KFo"/>
+                                            <constraint firstAttribute="height" constant="32" id="zOs-uh-MZL"/>
                                         </constraints>
-                                    </imageView>
+                                        <state key="normal" image="userSelectedIcon"/>
+                                        <connections>
+                                            <action selector="userButtonTapped:" destination="G5f-DG-s5L" eventType="touchUpInside" id="h0o-JE-tfG"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDY-hp-vQt">
@@ -376,6 +380,7 @@
                             <constraint firstItem="O3V-MK-NVU" firstAttribute="trailing" secondItem="lu6-JT-iVs" secondAttribute="trailing" constant="46" id="UGh-zZ-B7n"/>
                             <constraint firstItem="bif-gw-3Sl" firstAttribute="centerX" secondItem="4JD-g9-9g6" secondAttribute="centerX" id="VVU-Ae-oZU"/>
                             <constraint firstItem="lu6-JT-iVs" firstAttribute="top" secondItem="O3V-MK-NVU" secondAttribute="top" constant="20" id="XCM-Jy-Dvv"/>
+                            <constraint firstItem="Xo1-YS-54J" firstAttribute="centerX" secondItem="4JD-g9-9g6" secondAttribute="centerX" id="b1l-yR-Q7g"/>
                             <constraint firstItem="VPb-Qn-OHL" firstAttribute="top" secondItem="fMj-7r-bg9" secondAttribute="bottom" constant="15" id="dMl-hI-2Vn"/>
                             <constraint firstItem="fMj-7r-bg9" firstAttribute="width" secondItem="4JD-g9-9g6" secondAttribute="width" multiplier="0.869565" id="eVZ-ET-k9Y"/>
                             <constraint firstItem="bif-gw-3Sl" firstAttribute="leading" secondItem="O3V-MK-NVU" secondAttribute="leading" constant="27" id="efO-hZ-fpy"/>
@@ -385,6 +390,7 @@
                             <constraint firstItem="VPb-Qn-OHL" firstAttribute="leading" secondItem="4JD-g9-9g6" secondAttribute="leading" constant="106" id="p2a-IC-VhN"/>
                             <constraint firstItem="SIV-2U-OsT" firstAttribute="leading" secondItem="4JD-g9-9g6" secondAttribute="leading" constant="112" id="qhv-Da-EJg"/>
                             <constraint firstAttribute="trailing" secondItem="rvJ-gp-DIi" secondAttribute="trailing" constant="108" id="tIu-hb-Ew7"/>
+                            <constraint firstItem="Xo1-YS-54J" firstAttribute="top" secondItem="O3V-MK-NVU" secondAttribute="top" constant="-3" id="waQ-aq-UJD"/>
                             <constraint firstAttribute="trailing" secondItem="smZ-pQ-mZh" secondAttribute="trailing" constant="102" id="wlP-e8-J0w"/>
                             <constraint firstItem="smZ-pQ-mZh" firstAttribute="top" secondItem="fMj-7r-bg9" secondAttribute="bottom" constant="15" id="xdK-sz-CPS"/>
                             <constraint firstItem="VPb-Qn-OHL" firstAttribute="width" secondItem="4JD-g9-9g6" secondAttribute="width" multiplier="0.193237" id="zTQ-Zh-EII"/>
@@ -1870,7 +1876,7 @@ your other matches are waiting!</string>
         <image name="fiftyTransparentRedHeart" width="49" height="47"/>
         <image name="grayHeart" width="49" height="47"/>
         <image name="greenVarBubble" width="339" height="45"/>
-        <image name="heart" width="204" height="260"/>
+        <image name="heart" width="192" height="246"/>
         <image name="iconAnswerPink" width="341" height="47"/>
         <image name="iconAnswerRectangleGreen" width="339" height="45"/>
         <image name="iconBotAvatar" width="130" height="130"/>
@@ -1899,7 +1905,7 @@ your other matches are waiting!</string>
         <image name="title" width="291" height="58"/>
         <image name="tranparentRedHeart" width="79" height="72"/>
         <image name="twentyTransparentRedHeart" width="79" height="72"/>
-        <image name="user" width="21" height="26"/>
+        <image name="userSelectedIcon" width="31" height="36"/>
         <image name="whiteVarBubble" width="339" height="45"/>
         <image name="womanRound" width="280" height="280"/>
         <namedColor name="outgoingAudioMessageTint">

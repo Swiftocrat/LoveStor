@@ -62,6 +62,8 @@
 		438BC8EA25704D3B000D1519 /* HoroscopeSignTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438BC8E825704D3B000D1519 /* HoroscopeSignTableViewCell.swift */; };
 		438BC8EB25704D3B000D1519 /* HoroscopeSignTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 438BC8E925704D3B000D1519 /* HoroscopeSignTableViewCell.xib */; };
 		43939AC125546BFD006A50B1 /* BasicChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43939AC025546BFD006A50B1 /* BasicChatViewController.swift */; };
+		439E8FE725764F670088F621 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439E8FE625764F670088F621 /* Profile.storyboard */; };
+		439E8FEB2576580E0088F621 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439E8FEA2576580E0088F621 /* UserViewController.swift */; };
 		43B57C612551ECBF00411588 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B57C602551ECBF00411588 /* LoaderViewController.swift */; };
 		43B57C722551EE5C00411588 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B57C712551EE5C00411588 /* SelectionViewController.swift */; };
 		43BC1BC22555DB0C00D0F13D /* PaidAnswerChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43BC1BC12555DB0C00D0F13D /* PaidAnswerChatViewController.swift */; };
@@ -132,6 +134,8 @@
 		438BC8E825704D3B000D1519 /* HoroscopeSignTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeSignTableViewCell.swift; sourceTree = "<group>"; };
 		438BC8E925704D3B000D1519 /* HoroscopeSignTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HoroscopeSignTableViewCell.xib; sourceTree = "<group>"; };
 		43939AC025546BFD006A50B1 /* BasicChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicChatViewController.swift; sourceTree = "<group>"; };
+		439E8FE625764F670088F621 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		439E8FEA2576580E0088F621 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		43B57C602551ECBF00411588 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
 		43B57C712551EE5C00411588 /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 		43BC1BC12555DB0C00D0F13D /* PaidAnswerChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaidAnswerChatViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				43939ABF25546BEF006A50B1 /* Chat */,
+				439E8FE9257657E00088F621 /* Profile */,
 				438066D0256FEE2200B39E76 /* Registration */,
 				28740B4D2530B4E40090DCC1 /* ViewController.swift */,
 				43EBAF7B2551D6340096FC69 /* ChatVC.swift */,
@@ -220,6 +225,7 @@
 				28329799253710FF00F59EF0 /* Cells */,
 				28740B4F2530B4E40090DCC1 /* Main.storyboard */,
 				43845622256E811E00C70F38 /* Registration.storyboard */,
+				439E8FE625764F670088F621 /* Profile.storyboard */,
 				43845625256E869F00C70F38 /* EntryPopup */,
 				28740B542530B4E90090DCC1 /* LaunchScreen.storyboard */,
 			);
@@ -377,6 +383,14 @@
 			path = Chat;
 			sourceTree = "<group>";
 		};
+		439E8FE9257657E00088F621 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				439E8FEA2576580E0088F621 /* UserViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		43C35A282555C5830062E115 /* SelfBigBubbleTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -474,6 +488,7 @@
 				28740B532530B4E90090DCC1 /* Assets.xcassets in Resources */,
 				2832976625366D4500F59EF0 /* StickerCollectionViewCell.xib in Resources */,
 				2832976C2536F97E00F59EF0 /* SmallBubleTableViewCell.xib in Resources */,
+				439E8FE725764F670088F621 /* Profile.storyboard in Resources */,
 				283297AE25371DCA00F59EF0 /* SelfStickerTableViewCell.xib in Resources */,
 				4345743E25718CFC0000C714 /* ProfileIconCollectionViewCell.xib in Resources */,
 				43845623256E811F00C70F38 /* Registration.storyboard in Resources */,
@@ -574,6 +589,7 @@
 				43C35A2B2555C5C80062E115 /* SelfBigBubbleTableViewCell.swift in Sources */,
 				283297AD25371DCA00F59EF0 /* SelfStickerTableViewCell.swift in Sources */,
 				43B57C612551ECBF00411588 /* LoaderViewController.swift in Sources */,
+				439E8FEB2576580E0088F621 /* UserViewController.swift in Sources */,
 				283297A12537144500F59EF0 /* SelfSmallTableViewCell.swift in Sources */,
 				438066E325703F2C00B39E76 /* TermsViewController.swift in Sources */,
 			);

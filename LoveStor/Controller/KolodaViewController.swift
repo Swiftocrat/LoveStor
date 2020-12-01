@@ -11,54 +11,60 @@ import Then
 
 class KolodaViewController: UIViewController {
   
-  @IBOutlet weak var likeGradientView: GradientView!
-  @IBOutlet weak var crossGradientView: GradientView!
-  @IBOutlet weak var likeButton: UIView! {
-    didSet {
-      likeButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(likeTapped)))
+    @IBOutlet weak var likeGradientView:   GradientView!
+    @IBOutlet weak var crossGradientView:  GradientView!
+    @IBOutlet weak var likeButton: UIView! {
+      didSet {
+        likeButton.addGestureRecognizer   (UITapGestureRecognizer (target: self, action:  #selector(likeTapped)))
+      }
     }
-  }
-  @IBOutlet weak var crossButton: UIView! {
-    didSet {
-      crossButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(crossTapped)))
+    @IBOutlet weak var crossButton:     UIView! {
+      didSet {
+        crossButton.addGestureRecognizer   (UITapGestureRecognizer (target: self, action:  #selector(crossTapped)))
+      }
     }
-  }
   
-  let images:[UIImage] = Array(repeating: UIImage(named: "woman")!, count: 3)
+    let images:[UIImage] = Array(repeating: UIImage(named: "woman")!, count: 3)
   
-  @IBOutlet weak var kolodaView: KolodaView! {
-    didSet {
+    @IBOutlet weak var kolodaView:  KolodaView! {
+      didSet {
+          kolodaView.layer.cornerRadius = 30
+        kolodaView.dataSource = self
+        kolodaView.delegate = self
         kolodaView.layer.cornerRadius = 30
-      kolodaView.dataSource = self
-      kolodaView.delegate = self
-      kolodaView.layer.cornerRadius = 30
+      }
     }
-  }
-  override func viewDidAppear(_ animated: Bool) {
-    likeGradientView.makeCircle()
-    crossGradientView.makeCircle()
-    crossButton.do {
-      $0.makeCircle()
-      $0.dropShadow()
+    override func viewDidAppear(_   animated: Bool) {
+      likeGradientView.makeCircle()
+      crossGradientView.makeCircle()
+      crossButton.do {
+        $0.makeCircle()
+        $0.dropShadow()
+      }
+      likeButton.do {
+        $0.makeCircle()
+        $0.dropShadow()
+      }
     }
-    likeButton.do {
-      $0.makeCircle()
-      $0.dropShadow()
-    }
-  }
-  override func viewDidLoad() {
-    super.viewDidLoad()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
   
-  @objc func crossTapped() {
-    crossButton.pulsate()
-  }
-  
-  @objc func likeTapped() {
-    likeButton.pulsate()
-  }
+    @objc func crossTapped() {
+        crossButton.pulsate()
+    }
+    
+    @objc func likeTapped() {
+        likeButton.pulsate()
+    }
+    
+    @IBAction func userButtonTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Profile", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "UserViewController") as! UserViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension KolodaViewController: KolodaViewDelegate, KolodaViewDataSource {
