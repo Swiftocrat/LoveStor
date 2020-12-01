@@ -236,7 +236,7 @@
                                 <rect key="frame" x="22" y="124" width="370" height="500"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="500" id="wZD-cv-R1w"/>
+                                    <constraint firstAttribute="width" secondItem="KZV-w4-JF0" secondAttribute="height" multiplier="37:50" id="Icj-Lu-poC"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="saR-g9-mr6">
                                     <size key="itemSize" width="128" height="128"/>
@@ -280,7 +280,6 @@
                     <navigationItem key="navigationItem" id="B0A-wN-dtV"/>
                     <connections>
                         <outlet property="collectionView" destination="KZV-w4-JF0" id="Iyt-es-9Wr"/>
-                        <outlet property="collectionViewHeightConstraint" destination="wZD-cv-R1w" id="w1D-sd-8gc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VYb-cL-LV0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
