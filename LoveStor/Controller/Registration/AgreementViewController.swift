@@ -24,10 +24,10 @@ extension AgreementViewController: EntryPopupViewDelegate {
         let vc = storyboard.instantiateViewController(identifier: "TermsViewController") as TermsViewController
         if conditionsType == .privacyPolicy {
             vc.titleText = "Privacy Policy"
-            vc.conditionsText = "Lorem ipsum"
+//            vc.conditionsText = "Lorem ipsum"
         } else {
             vc.titleText = "Terms of Service"
-            vc.conditionsText = "Lorem ipsum"
+//            vc.conditionsText = "Lorem ipsum"
         }
         navigationController?.pushViewController(vc, animated: true)
     }

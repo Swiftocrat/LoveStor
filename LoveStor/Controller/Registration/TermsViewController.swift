@@ -13,7 +13,7 @@ class TermsViewController: UIViewController {
     @IBOutlet weak var conditionsTextView: UITextView!
     
     var titleText = ""
-    var conditionsText = ""
+    var conditionsText = "Lorem ipsum"
     
     override func viewDidLoad() {
         super.viewDidLoad()

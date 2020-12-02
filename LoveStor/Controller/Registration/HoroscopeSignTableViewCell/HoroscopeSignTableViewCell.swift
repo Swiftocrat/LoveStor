@@ -22,19 +22,12 @@ class HoroscopeSignTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        
         if selected {
             selectionImageView.image = UIImage(named: "selectedCircleSelectedIcon")
             selectionView.isHidden = false
-            print("SELECTED")
-//            contentView.backgroundColor = .white
-//            contentView.layer.opacity = 0.1
         } else {
             selectionImageView.image = UIImage(named: "selectionCircleIcon")
             selectionView.isHidden = true
-            print("DESELECTED CELL")
-//            contentView.backgroundColor = .clear
-//            contentView.layer.opacity = 1
         }
     }
     
