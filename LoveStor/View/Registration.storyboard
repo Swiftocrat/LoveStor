@@ -28,7 +28,7 @@
                                 <rect key="frame" x="27" y="138" width="360" height="556"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="556" id="9Aw-Kc-p6G"/>
+                                    <constraint firstAttribute="width" secondItem="GYQ-We-MBq" secondAttribute="height" multiplier="90:139" id="5GQ-xl-2Xc"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -112,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PdB-Ew-TRJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-117" y="670"/>
+            <point key="canvasLocation" x="-146" y="655"/>
         </scene>
         <!--Name View Controller-->
         <scene sceneID="C4Z-yt-X05">
@@ -326,7 +326,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Lh8-3D-rQp" firstAttribute="trailing" secondItem="ycD-zY-ge9" secondAttribute="trailing" constant="35" id="3eI-tc-AjD"/>
-                            <constraint firstItem="6M2-pO-VQ0" firstAttribute="centerY" secondItem="Iki-W3-ce6" secondAttribute="centerY" multiplier="0.094" id="IC6-8u-ud0"/>
+                            <constraint firstItem="6M2-pO-VQ0" firstAttribute="top" secondItem="Lh8-3D-rQp" secondAttribute="top" constant="25" id="5Uc-BT-EJB"/>
                             <constraint firstItem="jeY-HJ-zpa" firstAttribute="height" secondItem="MkD-v2-tV1" secondAttribute="height" multiplier="0.687648" id="IUw-GC-Bjx"/>
                             <constraint firstItem="ycD-zY-ge9" firstAttribute="top" secondItem="jeY-HJ-zpa" secondAttribute="bottom" constant="23" id="Okf-Xt-AkE"/>
                             <constraint firstItem="MkD-v2-tV1" firstAttribute="trailing" secondItem="Lh8-3D-rQp" secondAttribute="trailing" id="S2T-Oh-Q40"/>
@@ -405,6 +405,7 @@
                                     <constraint firstItem="vyP-4e-985" firstAttribute="leading" secondItem="2Ad-30-SNl" secondAttribute="trailing" id="TQx-D7-SWn"/>
                                     <constraint firstItem="2Ad-30-SNl" firstAttribute="leading" secondItem="Iuh-ot-Kdp" secondAttribute="leading" constant="29" id="YI8-Qw-zIc"/>
                                     <constraint firstAttribute="trailing" secondItem="vyP-4e-985" secondAttribute="trailing" constant="12" id="nNN-1i-MK1"/>
+                                    <constraint firstAttribute="width" secondItem="Iuh-ot-Kdp" secondAttribute="height" multiplier="69:12" id="tY3-Nf-3ea"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -511,7 +512,6 @@ Tap on the Confirm button to create your profile! </string>
                             <constraint firstItem="nuT-f1-4xZ" firstAttribute="trailing" secondItem="zC9-8q-vmO" secondAttribute="trailing" constant="65" id="IAY-hd-UxZ"/>
                             <constraint firstItem="jvp-ap-Ndw" firstAttribute="leading" secondItem="nuT-f1-4xZ" secondAttribute="leading" constant="38" id="IJH-KR-pMz"/>
                             <constraint firstItem="zC9-8q-vmO" firstAttribute="top" secondItem="Iuh-ot-Kdp" secondAttribute="bottom" constant="50" id="Mrt-fb-cd5"/>
-                            <constraint firstItem="Iuh-ot-Kdp" firstAttribute="height" secondItem="QWG-M0-Pdb" secondAttribute="height" multiplier="0.0667" id="QgC-FT-urT"/>
                             <constraint firstAttribute="bottom" secondItem="QWG-M0-Pdb" secondAttribute="bottom" id="c5K-y5-rQR"/>
                             <constraint firstItem="zC9-8q-vmO" firstAttribute="leading" secondItem="nuT-f1-4xZ" secondAttribute="leading" constant="65" id="fFP-Ew-oyU"/>
                             <constraint firstItem="ls8-lB-ouc" firstAttribute="top" secondItem="pCF-M4-fjR" secondAttribute="bottom" constant="40" id="fWa-Nc-dsR"/>
