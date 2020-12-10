@@ -18,9 +18,6 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         setupSelectedValues()
-        if UIScreen.main.bounds.height < 668.0 {
-            instructionLabelTopConstraint.constant = 30
-        }
     }
     
     func setupSelectedValues() {
